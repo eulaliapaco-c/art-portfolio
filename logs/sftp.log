@@ -1,0 +1,432 @@
+Mar  8 13:57:05 10.71.56.0 u66531954 Connection from 10.71.56.0 port 50668 on 82.165.83.157 port 22 rdomain ""
+Mar  8 13:57:06 10.71.56.0 u66531954 Accepted password for u66531954 from 10.71.56.0 port 50668 ssh2
+Mar  8 13:57:06 10.71.56.0 u66531954 Starting session: subsystem 'sftp' for u66531954 from 10.71.56.0 port 50668 id 0
+Mar  8 13:57:06 10.71.56.0 u66531954 session opened for local user u66531954 from [10.71.56.0]
+Mar  8 13:57:06 10.71.56.0 u66531954 session closed for local user u66531954 from [10.71.56.0]
+Mar  8 13:57:06 10.71.56.0 u66531954 Connection closed by 10.71.56.0 port 50668
+Mar  8 13:57:22 10.71.56.0 u66531954 Connection from 10.71.56.0 port 15438 on 82.165.83.157 port 22 rdomain ""
+Mar  8 13:57:22 10.71.56.0 u66531954 Accepted password for u66531954 from 10.71.56.0 port 15438 ssh2
+Mar  8 13:57:22 10.71.56.0 u66531954 Starting session: subsystem 'sftp' for u66531954 from 10.71.56.0 port 15438 id 0
+Mar  8 13:57:22 10.71.56.0 u66531954 session opened for local user u66531954 from [10.71.56.0]
+Mar  8 13:57:22 10.71.56.0 u66531954 session closed for local user u66531954 from [10.71.56.0]
+Mar  8 13:57:22 10.71.56.0 u66531954 Connection closed by 10.71.56.0 port 15438
+Mar  8 13:59:37 10.71.56.0 tmp66531954-3445 Connection from 10.71.56.0 port 34712 on 82.165.83.157 port 22 rdomain ""
+Mar  8 13:59:37 10.71.56.0 tmp66531954-3445 Accepted password for tmp66531954-3445 from 10.71.56.0 port 34712 ssh2
+Mar  8 13:59:37 10.71.56.0 tmp66531954-3445 Starting session: subsystem 'sftp' for tmp66531954-3445 from 10.71.56.0 port 34712 id 0
+Mar  8 13:59:37 10.71.56.0 tmp66531954-3445 session opened for local user tmp66531954-3445 from [10.71.56.0]
+Mar  8 14:02:30 10.71.57.0 u66531954 Connection from 10.71.57.0 port 17296 on 82.165.83.157 port 22 rdomain ""
+Mar  8 14:02:33 10.71.57.0 u66531954 Accepted password for u66531954 from 10.71.57.0 port 17296 ssh2
+Mar  8 14:02:33 10.71.57.0 u66531954 Starting session: subsystem 'sftp' for u66531954 from 10.71.57.0 port 17296 id 0
+Mar  8 14:02:33 10.71.57.0 u66531954 session opened for local user u66531954 from [10.71.57.0]
+Mar  8 14:03:02 10.71.57.0 u66531954 Connection from 10.71.57.0 port 46792 on 82.165.83.157 port 22 rdomain ""
+Mar  8 14:03:02 10.71.57.0 u66531954 Accepted password for u66531954 from 10.71.57.0 port 46792 ssh2
+Mar  8 14:03:02 10.71.57.0 u66531954 Connection from 10.71.57.0 port 46794 on 82.165.83.157 port 22 rdomain ""
+Mar  8 14:03:02 10.71.57.0 u66531954 Accepted password for u66531954 from 10.71.57.0 port 46794 ssh2
+Mar  8 14:03:02 10.71.57.0 u66531954 Starting session: subsystem 'sftp' for u66531954 from 10.71.57.0 port 46792 id 0
+Mar  8 14:03:02 10.71.57.0 u66531954 session opened for local user u66531954 from [10.71.57.0]
+Mar  8 14:03:02 10.71.57.0 u66531954 Starting session: subsystem 'sftp' for u66531954 from 10.71.57.0 port 46794 id 0
+Mar  8 14:03:02 10.71.57.0 u66531954 session opened for local user u66531954 from [10.71.57.0]
+Mar  8 14:03:02 10.71.57.0 u66531954 open "/avisolegal.html" flags READ mode 0666
+Mar  8 14:03:02 10.71.57.0 u66531954 open "/about.html" flags READ mode 0666
+Mar  8 14:03:02 10.71.57.0 u66531954 close "/avisolegal.html" bytes read 17996 written 0
+Mar  8 14:03:02 10.71.57.0 u66531954 [10.71.57.0|get|0|17996|0|0|0|2f617669736f6c6567616c2e68746d6c|]
+Mar  8 14:03:02 10.71.57.0 u66531954 close "/about.html" bytes read 15450 written 0
+Mar  8 14:03:02 10.71.57.0 u66531954 [10.71.57.0|get|0|15450|0|0|0|2f61626f75742e68746d6c|]
+Mar  8 14:03:02 10.71.57.0 u66531954 open "/contacto.html" flags READ mode 0666
+Mar  8 14:03:02 10.71.57.0 u66531954 open "/index.html" flags READ mode 0666
+Mar  8 14:03:03 10.71.57.0 u66531954 close "/contacto.html" bytes read 11277 written 0
+Mar  8 14:03:03 10.71.57.0 u66531954 [10.71.57.0|get|1|11277|0|0|0|2f636f6e746163746f2e68746d6c|]
+Mar  8 14:03:03 10.71.57.0 u66531954 close "/index.html" bytes read 14477 written 0
+Mar  8 14:03:03 10.71.57.0 u66531954 [10.71.57.0|get|1|14477|0|0|0|2f696e6465782e68746d6c|]
+Mar  8 14:03:03 10.71.57.0 u66531954 open "/obra.html" flags READ mode 0666
+Mar  8 14:03:03 10.71.57.0 u66531954 open "/privacidad.html" flags READ mode 0666
+Mar  8 14:03:03 10.71.57.0 u66531954 close "/obra.html" bytes read 12374 written 0
+Mar  8 14:03:03 10.71.57.0 u66531954 [10.71.57.0|get|0|12374|0|0|0|2f6f6272612e68746d6c|]
+Mar  8 14:03:03 10.71.57.0 u66531954 close "/privacidad.html" bytes read 16686 written 0
+Mar  8 14:03:03 10.71.57.0 u66531954 [10.71.57.0|get|0|16686|0|0|0|2f707269766163696461642e68746d6c|]
+Mar  8 14:03:03 10.71.57.0 u66531954 open "/proyecto1.html" flags READ mode 0666
+Mar  8 14:03:03 10.71.57.0 u66531954 open "/proyecto2.html" flags READ mode 0666
+Mar  8 14:03:03 10.71.57.0 u66531954 close "/proyecto1.html" bytes read 15792 written 0
+Mar  8 14:03:03 10.71.57.0 u66531954 [10.71.57.0|get|0|15792|0|0|0|2f70726f796563746f312e68746d6c|]
+Mar  8 14:03:03 10.71.57.0 u66531954 close "/proyecto2.html" bytes read 14383 written 0
+Mar  8 14:03:03 10.71.57.0 u66531954 [10.71.57.0|get|0|14383|0|0|0|2f70726f796563746f322e68746d6c|]
+Mar  8 14:03:03 10.71.57.0 u66531954 open "/proyecto3.html" flags READ mode 0666
+Mar  8 14:03:03 10.71.57.0 u66531954 open "/proyecto4.html" flags READ mode 0666
+Mar  8 14:03:03 10.71.57.0 u66531954 close "/proyecto3.html" bytes read 12233 written 0
+Mar  8 14:03:03 10.71.57.0 u66531954 [10.71.57.0|get|0|12233|0|0|0|2f70726f796563746f332e68746d6c|]
+Mar  8 14:03:03 10.71.57.0 u66531954 close "/proyecto4.html" bytes read 11830 written 0
+Mar  8 14:03:03 10.71.57.0 u66531954 [10.71.57.0|get|0|11830|0|0|0|2f70726f796563746f342e68746d6c|]
+Mar  8 14:03:03 10.71.57.0 u66531954 open "/proyecto5.html" flags READ mode 0666
+Mar  8 14:03:03 10.71.57.0 u66531954 open "/proyecto6.html" flags READ mode 0666
+Mar  8 14:03:04 10.71.57.0 u66531954 close "/proyecto5.html" bytes read 11747 written 0
+Mar  8 14:03:04 10.71.57.0 u66531954 [10.71.57.0|get|1|11747|0|0|0|2f70726f796563746f352e68746d6c|]
+Mar  8 14:03:04 10.71.57.0 u66531954 close "/proyecto6.html" bytes read 11853 written 0
+Mar  8 14:03:04 10.71.57.0 u66531954 [10.71.57.0|get|1|11853|0|0|0|2f70726f796563746f362e68746d6c|]
+Mar  8 14:03:04 10.71.57.0 u66531954 Connection closed by 10.71.57.0 port 46794
+Mar  8 14:03:04 10.71.57.0 u66531954 session closed for local user u66531954 from [10.71.57.0]
+Mar  8 14:03:04 10.71.57.0 u66531954 open "/textos.html" flags READ mode 0666
+Mar  8 14:03:04 10.71.57.0 u66531954 close "/textos.html" bytes read 10750 written 0
+Mar  8 14:03:04 10.71.57.0 u66531954 [10.71.57.0|get|0|10750|0|0|0|2f746578746f732e68746d6c|]
+Mar  8 14:03:04 10.71.57.0 u66531954 Connection closed by 10.71.57.0 port 46792
+Mar  8 14:03:04 10.71.57.0 u66531954 session closed for local user u66531954 from [10.71.57.0]
+Mar  8 14:03:04 10.71.57.0 u66531954 Connection from 10.71.57.0 port 29476 on 82.165.83.157 port 22 rdomain ""
+Mar  8 14:03:04 10.71.57.0 u66531954 Accepted password for u66531954 from 10.71.57.0 port 29476 ssh2
+Mar  8 14:03:04 10.71.57.0 u66531954 Starting session: subsystem 'sftp' for u66531954 from 10.71.57.0 port 29476 id 0
+Mar  8 14:03:04 10.71.57.0 u66531954 session opened for local user u66531954 from [10.71.57.0]
+Mar  8 14:03:04 10.71.57.0 u66531954 Connection from 10.71.57.0 port 29486 on 82.165.83.157 port 22 rdomain ""
+Mar  8 14:03:04 10.71.57.0 u66531954 Accepted password for u66531954 from 10.71.57.0 port 29486 ssh2
+Mar  8 14:03:05 10.71.57.0 u66531954 Starting session: subsystem 'sftp' for u66531954 from 10.71.57.0 port 29486 id 0
+Mar  8 14:03:05 10.71.57.0 u66531954 session opened for local user u66531954 from [10.71.57.0]
+Mar  8 14:03:05 10.71.57.0 u66531954 open "/assets/large_right.png" flags READ mode 0666
+Mar  8 14:03:05 10.71.57.0 u66531954 close "/assets/large_right.png" bytes read 1561 written 0
+Mar  8 14:03:05 10.71.57.0 u66531954 [10.71.57.0|get|0|1561|0|0|0|2f6173736574732f6c617267655f72696768742e706e67|]
+Mar  8 14:03:05 10.71.57.0 u66531954 open "/assets/large_left.png" flags READ mode 0666
+Mar  8 14:03:05 10.71.57.0 u66531954 close "/assets/large_left.png" bytes read 1517 written 0
+Mar  8 14:03:05 10.71.57.0 u66531954 [10.71.57.0|get|0|1517|0|0|0|2f6173736574732f6c617267655f6c6566742e706e67|]
+Mar  8 14:03:05 10.71.57.0 u66531954 open "/css/styles.css" flags READ mode 0666
+Mar  8 14:03:05 10.71.57.0 u66531954 close "/css/styles.css" bytes read 927 written 0
+Mar  8 14:03:05 10.71.57.0 u66531954 [10.71.57.0|get|0|927|0|0|0|2f6373732f7374796c65732e637373|]
+Mar  8 14:03:05 10.71.57.0 u66531954 open "/css/stylen.css" flags READ mode 0666
+Mar  8 14:03:05 10.71.57.0 u66531954 open "/css/style.css" flags READ mode 0666
+Mar  8 14:03:05 10.71.57.0 u66531954 close "/css/stylen.css" bytes read 52098 written 0
+Mar  8 14:03:05 10.71.57.0 u66531954 [10.71.57.0|get|0|52098|0|0|0|2f6373732f7374796c656e2e637373|]
+Mar  8 14:03:05 10.71.57.0 u66531954 close "/css/style.css" bytes read 52201 written 0
+Mar  8 14:03:05 10.71.57.0 u66531954 [10.71.57.0|get|0|52201|0|0|0|2f6373732f7374796c652e637373|]
+Mar  8 14:03:05 10.71.57.0 u66531954 open "/css/settings.css" flags READ mode 0666
+Mar  8 14:03:06 10.71.57.0 u66531954 open "/css/ie.css" flags READ mode 0666
+Mar  8 14:03:06 10.71.57.0 u66531954 close "/css/settings.css" bytes read 19113 written 0
+Mar  8 14:03:06 10.71.57.0 u66531954 [10.71.57.0|get|1|19113|0|0|0|2f6373732f73657474696e67732e637373|]
+Mar  8 14:03:06 10.71.57.0 u66531954 close "/css/ie.css" bytes read 321 written 0
+Mar  8 14:03:06 10.71.57.0 u66531954 [10.71.57.0|get|1|321|0|0|0|2f6373732f69652e637373|]
+Mar  8 14:03:06 10.71.57.0 u66531954 open "/css/custom-style.css" flags READ mode 0666
+Mar  8 14:03:06 10.71.57.0 u66531954 open "/css/css.css" flags READ mode 0666
+Mar  8 14:03:06 10.71.57.0 u66531954 close "/css/custom-style.css" bytes read 11736 written 0
+Mar  8 14:03:06 10.71.57.0 u66531954 [10.71.57.0|get|0|11736|0|0|0|2f6373732f637573746f6d2d7374796c652e637373|]
+Mar  8 14:03:06 10.71.57.0 u66531954 open "/css/column.css" flags READ mode 0666
+Mar  8 14:03:06 10.71.57.0 u66531954 close "/css/css.css" bytes read 4589 written 0
+Mar  8 14:03:06 10.71.57.0 u66531954 [10.71.57.0|get|0|4589|0|0|0|2f6373732f6373732e637373|]
+Mar  8 14:03:06 10.71.57.0 u66531954 close "/css/column.css" bytes read 1443 written 0
+Mar  8 14:03:06 10.71.57.0 u66531954 [10.71.57.0|get|0|1443|0|0|0|2f6373732f636f6c756d6e2e637373|]
+Mar  8 14:03:06 10.71.57.0 u66531954 open "/css/captions.css" flags READ mode 0666
+Mar  8 14:03:06 10.71.57.0 u66531954 open "/css/adaptive_old.css" flags READ mode 0666
+Mar  8 14:03:06 10.71.57.0 u66531954 close "/css/captions.css" bytes read 4028 written 0
+Mar  8 14:03:06 10.71.57.0 u66531954 [10.71.57.0|get|0|4028|0|0|0|2f6373732f63617074696f6e732e637373|]
+Mar  8 14:03:06 10.71.57.0 u66531954 close "/css/adaptive_old.css" bytes read 4263 written 0
+Mar  8 14:03:06 10.71.57.0 u66531954 [10.71.57.0|get|0|4263|0|0|0|2f6373732f61646170746976655f6f6c642e637373|]
+Mar  8 14:03:06 10.71.57.0 u66531954 open "/css/adaptive.css" flags READ mode 0666
+Mar  8 14:03:06 10.71.57.0 u66531954 close "/css/adaptive.css" bytes read 4262 written 0
+Mar  8 14:03:06 10.71.57.0 u66531954 [10.71.57.0|get|0|4262|0|0|0|2f6373732f61646170746976652e637373|]
+Mar  8 14:03:07 10.71.57.0 u66531954 open "/css/font-awesome/css/font-awesome.min.css" flags READ mode 0666
+Mar  8 14:03:07 10.71.57.0 u66531954 close "/css/font-awesome/css/font-awesome.min.css" bytes read 31000 written 0
+Mar  8 14:03:07 10.71.57.0 u66531954 [10.71.57.0|get|0|31000|0|0|0|2f6373732f666f6e742d617765736f6d652f6373732f666f6e742d617765736f6d652e6d696e2e637373|]
+Mar  8 14:03:07 10.71.57.0 u66531954 open "/css/font-awesome/css/font-awesome.css" flags READ mode 0666
+Mar  8 14:03:07 10.71.57.0 u66531954 close "/css/font-awesome/css/font-awesome.css" bytes read 37414 written 0
+Mar  8 14:03:07 10.71.57.0 u66531954 [10.71.57.0|get|0|37414|0|0|0|2f6373732f666f6e742d617765736f6d652f6373732f666f6e742d617765736f6d652e637373|]
+Mar  8 14:03:07 10.71.57.0 u66531954 open "/css/font-awesome/fonts/fontawesome-webfont.woff2" flags READ mode 0666
+Mar  8 14:03:07 10.71.57.0 u66531954 close "/css/font-awesome/fonts/fontawesome-webfont.woff2" bytes read 77160 written 0
+Mar  8 14:03:07 10.71.57.0 u66531954 [10.71.57.0|get|0|77160|0|0|0|2f6373732f666f6e742d617765736f6d652f666f6e74732f666f6e74617765736f6d652d776562666f6e742e776f666632|]
+Mar  8 14:03:07 10.71.57.0 u66531954 open "/css/font-awesome/fonts/fontawesome-webfont.woff" flags READ mode 0666
+Mar  8 14:03:07 10.71.57.0 u66531954 open "/css/font-awesome/fonts/fontawesome-webfont.ttf" flags READ mode 0666
+Mar  8 14:03:07 10.71.57.0 u66531954 close "/css/font-awesome/fonts/fontawesome-webfont.woff" bytes read 98024 written 0
+Mar  8 14:03:07 10.71.57.0 u66531954 [10.71.57.0|get|0|98024|0|0|0|2f6373732f666f6e742d617765736f6d652f666f6e74732f666f6e74617765736f6d652d776562666f6e742e776f6666|]
+Mar  8 14:03:07 10.71.57.0 u66531954 close "/css/font-awesome/fonts/fontawesome-webfont.ttf" bytes read 165548 written 0
+Mar  8 14:03:07 10.71.57.0 u66531954 [10.71.57.0|get|0|165548|0|0|0|2f6373732f666f6e742d617765736f6d652f666f6e74732f666f6e74617765736f6d652d776562666f6e742e747466|]
+Mar  8 14:03:07 10.71.57.0 u66531954 open "/css/font-awesome/fonts/fontawesome-webfont.svg" flags READ mode 0666
+Mar  8 14:03:07 10.71.57.0 u66531954 open "/css/font-awesome/fonts/fontawesome-webfont.eot" flags READ mode 0666
+Mar  8 14:03:08 10.71.57.0 u66531954 close "/css/font-awesome/fonts/fontawesome-webfont.svg" bytes read 444379 written 0
+Mar  8 14:03:08 10.71.57.0 u66531954 [10.71.57.0|get|1|444379|0|0|0|2f6373732f666f6e742d617765736f6d652f666f6e74732f666f6e74617765736f6d652d776562666f6e742e737667|]
+Mar  8 14:03:08 10.71.57.0 u66531954 close "/css/font-awesome/fonts/fontawesome-webfont.eot" bytes read 165742 written 0
+Mar  8 14:03:08 10.71.57.0 u66531954 [10.71.57.0|get|1|165742|0|0|0|2f6373732f666f6e742d617765736f6d652f666f6e74732f666f6e74617765736f6d652d776562666f6e742e656f74|]
+Mar  8 14:03:08 10.71.57.0 u66531954 open "/css/font-awesome/fonts/FontAwesome.otf" flags READ mode 0666
+Mar  8 14:03:08 10.71.57.0 u66531954 close "/css/font-awesome/fonts/FontAwesome.otf" bytes read 134808 written 0
+Mar  8 14:03:08 10.71.57.0 u66531954 [10.71.57.0|get|0|134808|0|0|0|2f6373732f666f6e742d617765736f6d652f666f6e74732f466f6e74417765736f6d652e6f7466|]
+Mar  8 14:03:08 10.71.57.0 u66531954 open "/css/images/divider.png" flags READ mode 0666
+Mar  8 14:03:08 10.71.57.0 u66531954 close "/css/images/divider.png" bytes read 994 written 0
+Mar  8 14:03:08 10.71.57.0 u66531954 [10.71.57.0|get|0|994|0|0|0|2f6373732f696d616765732f646976696465722e706e67|]
+Mar  8 14:03:08 10.71.57.0 u66531954 open "/img/logo1.jpg" flags READ mode 0666
+Mar  8 14:03:08 10.71.57.0 u66531954 close "/img/logo1.jpg" bytes read 64572 written 0
+Mar  8 14:03:08 10.71.57.0 u66531954 [10.71.57.0|get|0|64572|0|0|0|2f696d672f6c6f676f312e6a7067|]
+Mar  8 14:03:08 10.71.57.0 u66531954 open "/img/bio.jpg" flags READ mode 0666
+Mar  8 14:03:08 10.71.57.0 u66531954 open "/img/caratula/6.jpg" flags READ mode 0666
+Mar  8 14:03:08 10.71.57.0 u66531954 sent status No such file
+Mar  8 14:03:08 10.71.57.0 u66531954 close "/img/caratula/6.jpg" bytes read 179602 written 0
+Mar  8 14:03:08 10.71.57.0 u66531954 [10.71.57.0|get|0|179602|0|0|0|2f696d672f6361726174756c612f362e6a7067|]
+Mar  8 14:03:09 10.71.57.0 u66531954 open "/img/caratula/5.jpg" flags READ mode 0666
+Mar  8 14:03:09 10.71.57.0 u66531954 close "/img/bio.jpg" bytes read 3356784 written 0
+Mar  8 14:03:09 10.71.57.0 u66531954 [10.71.57.0|get|1|3356784|0|0|0|2f696d672f62696f2e6a7067|]
+Mar  8 14:03:09 10.71.57.0 u66531954 close "/img/caratula/5.jpg" bytes read 127860 written 0
+Mar  8 14:03:09 10.71.57.0 u66531954 [10.71.57.0|get|0|127860|0|0|0|2f696d672f6361726174756c612f352e6a7067|]
+Mar  8 14:03:09 10.71.57.0 u66531954 open "/img/caratula/3.jpg" flags READ mode 0666
+Mar  8 14:03:09 10.71.57.0 u66531954 open "/img/caratula/4.jpg" flags READ mode 0666
+Mar  8 14:03:09 10.71.57.0 u66531954 close "/img/caratula/3.jpg" bytes read 427085 written 0
+Mar  8 14:03:09 10.71.57.0 u66531954 [10.71.57.0|get|0|427085|0|0|0|2f696d672f6361726174756c612f332e6a7067|]
+Mar  8 14:03:09 10.71.57.0 u66531954 open "/img/caratula/2.jpg" flags READ mode 0666
+Mar  8 14:03:09 10.71.57.0 u66531954 close "/img/caratula/2.jpg" bytes read 342871 written 0
+Mar  8 14:03:09 10.71.57.0 u66531954 [10.71.57.0|get|0|342871|0|0|0|2f696d672f6361726174756c612f322e6a7067|]
+Mar  8 14:03:09 10.71.57.0 u66531954 open "/img/caratula/1.jpg" flags READ mode 0666
+Mar  8 14:03:09 10.71.57.0 u66531954 close "/img/caratula/4.jpg" bytes read 2611590 written 0
+Mar  8 14:03:09 10.71.57.0 u66531954 [10.71.57.0|get|0|2611590|0|0|0|2f696d672f6361726174756c612f342e6a7067|]
+Mar  8 14:03:10 10.71.57.0 u66531954 close "/img/caratula/1.jpg" bytes read 268904 written 0
+Mar  8 14:03:10 10.71.57.0 u66531954 [10.71.57.0|get|1|268904|0|0|0|2f696d672f6361726174756c612f312e6a7067|]
+Mar  8 14:03:10 10.71.57.0 u66531954 open "/img/erosiones/erosiones3.jpg" flags READ mode 0666
+Mar  8 14:03:10 10.71.57.0 u66531954 open "/img/erosiones/erosiones2.jpg" flags READ mode 0666
+Mar  8 14:03:10 10.71.57.0 u66531954 close "/img/erosiones/erosiones2.jpg" bytes read 1625783 written 0
+Mar  8 14:03:10 10.71.57.0 u66531954 [10.71.57.0|get|0|1625783|0|0|0|2f696d672f65726f73696f6e65732f65726f73696f6e6573322e6a7067|]
+Mar  8 14:03:10 10.71.57.0 u66531954 close "/img/erosiones/erosiones3.jpg" bytes read 2951699 written 0
+Mar  8 14:03:10 10.71.57.0 u66531954 [10.71.57.0|get|0|2951699|0|0|0|2f696d672f65726f73696f6e65732f65726f73696f6e6573332e6a7067|]
+Mar  8 14:03:10 10.71.57.0 u66531954 open "/img/erosiones/erosiones1.jpg" flags READ mode 0666
+Mar  8 14:03:10 10.71.57.0 u66531954 open "/img/erosiones/erosiones.jpg" flags READ mode 0666
+Mar  8 14:03:11 10.71.57.0 u66531954 close "/img/erosiones/erosiones.jpg" bytes read 1754973 written 0
+Mar  8 14:03:11 10.71.57.0 u66531954 [10.71.57.0|get|1|1754973|0|0|0|2f696d672f65726f73696f6e65732f65726f73696f6e65732e6a7067|]
+Mar  8 14:03:11 10.71.57.0 u66531954 open "/img/fragmentospaisaje/fragmentospaisaje.jpg" flags READ mode 0666
+Mar  8 14:03:11 10.71.57.0 u66531954 close "/img/erosiones/erosiones1.jpg" bytes read 3697319 written 0
+Mar  8 14:03:11 10.71.57.0 u66531954 [10.71.57.0|get|1|3697319|0|0|0|2f696d672f65726f73696f6e65732f65726f73696f6e6573312e6a7067|]
+Mar  8 14:03:11 10.71.57.0 u66531954 close "/img/fragmentospaisaje/fragmentospaisaje.jpg" bytes read 450364 written 0
+Mar  8 14:03:11 10.71.57.0 u66531954 [10.71.57.0|get|0|450364|0|0|0|2f696d672f667261676d656e746f7370616973616a652f667261676d656e746f7370616973616a652e6a7067|]
+Mar  8 14:03:11 10.71.57.0 u66531954 open "/img/fragmentospaisaje/erosionada.jpg" flags READ mode 0666
+Mar  8 14:03:11 10.71.57.0 u66531954 open "/img/fragmentospaisaje/arcillosa.jpg" flags READ mode 0666
+Mar  8 14:03:11 10.71.57.0 u66531954 close "/img/fragmentospaisaje/erosionada.jpg" bytes read 295639 written 0
+Mar  8 14:03:11 10.71.57.0 u66531954 [10.71.57.0|get|0|295639|0|0|0|2f696d672f667261676d656e746f7370616973616a652f65726f73696f6e6164612e6a7067|]
+Mar  8 14:03:12 10.71.57.0 u66531954 close "/img/fragmentospaisaje/arcillosa.jpg" bytes read 219431 written 0
+Mar  8 14:03:12 10.71.57.0 u66531954 [10.71.57.0|get|1|219431|0|0|0|2f696d672f667261676d656e746f7370616973616a652f617263696c6c6f73612e6a7067|]
+Mar  8 14:03:12 10.71.57.0 u66531954 open "/img/fragmentospaisaje/agrietada.jpg" flags READ mode 0666
+Mar  8 14:03:12 10.71.57.0 u66531954 open "/img/home/stratos4.jpg" flags READ mode 0666
+Mar  8 14:03:12 10.71.57.0 u66531954 close "/img/fragmentospaisaje/agrietada.jpg" bytes read 178360 written 0
+Mar  8 14:03:12 10.71.57.0 u66531954 [10.71.57.0|get|0|178360|0|0|0|2f696d672f667261676d656e746f7370616973616a652f6167726965746164612e6a7067|]
+Mar  8 14:03:12 10.71.57.0 u66531954 open "/img/home/fragmentospaisaje.jpg" flags READ mode 0666
+Mar  8 14:03:12 10.71.57.0 u66531954 close "/img/home/fragmentospaisaje.jpg" bytes read 1019764 written 0
+Mar  8 14:03:12 10.71.57.0 u66531954 [10.71.57.0|get|0|1019764|0|0|0|2f696d672f686f6d652f667261676d656e746f7370616973616a652e6a7067|]
+Mar  8 14:03:12 10.71.57.0 u66531954 close "/img/home/stratos4.jpg" bytes read 4268307 written 0
+Mar  8 14:03:12 10.71.57.0 u66531954 [10.71.57.0|get|0|4268307|0|0|0|2f696d672f686f6d652f73747261746f73342e6a7067|]
+Mar  8 14:03:12 10.71.57.0 u66531954 open "/img/home/erosiones.jpg" flags READ mode 0666
+Mar  8 14:03:13 10.71.57.0 u66531954 open "/img/home/camino.jpg" flags READ mode 0666
+Mar  8 14:03:13 10.71.57.0 u66531954 close "/img/home/camino.jpg" bytes read 382786 written 0
+Mar  8 14:03:13 10.71.57.0 u66531954 [10.71.57.0|get|0|382786|0|0|0|2f696d672f686f6d652f63616d696e6f2e6a7067|]
+Mar  8 14:03:13 10.71.57.0 u66531954 close "/img/home/erosiones.jpg" bytes read 1413738 written 0
+Mar  8 14:03:13 10.71.57.0 u66531954 [10.71.57.0|get|1|1413738|0|0|0|2f696d672f686f6d652f65726f73696f6e65732e6a7067|]
+Mar  8 14:03:13 10.71.57.0 u66531954 open "/img/home/arcillosa.jpg" flags READ mode 0666
+Mar  8 14:03:13 10.71.57.0 u66531954 open "/img/home/abs6.jpg" flags READ mode 0666
+Mar  8 14:03:13 10.71.57.0 u66531954 close "/img/home/arcillosa.jpg" bytes read 213951 written 0
+Mar  8 14:03:13 10.71.57.0 u66531954 [10.71.57.0|get|0|213951|0|0|0|2f696d672f686f6d652f617263696c6c6f73612e6a7067|]
+Mar  8 14:03:13 10.71.57.0 u66531954 close "/img/home/abs6.jpg" bytes read 419383 written 0
+Mar  8 14:03:13 10.71.57.0 u66531954 [10.71.57.0|get|0|419383|0|0|0|2f696d672f686f6d652f616273362e6a7067|]
+Mar  8 14:03:13 10.71.57.0 u66531954 open "/img/home/abs5.jpg" flags READ mode 0666
+Mar  8 14:03:13 10.71.57.0 u66531954 open "/img/home/abs2.jpg" flags READ mode 0666
+Mar  8 14:03:13 10.71.57.0 u66531954 close "/img/home/abs5.jpg" bytes read 448291 written 0
+Mar  8 14:03:13 10.71.57.0 u66531954 [10.71.57.0|get|0|448291|0|0|0|2f696d672f686f6d652f616273352e6a7067|]
+Mar  8 14:03:13 10.71.57.0 u66531954 close "/img/home/abs2.jpg" bytes read 711203 written 0
+Mar  8 14:03:13 10.71.57.0 u66531954 [10.71.57.0|get|0|711203|0|0|0|2f696d672f686f6d652f616273322e6a7067|]
+Mar  8 14:03:13 10.71.57.0 u66531954 open "/img/home/abs1.jpg" flags READ mode 0666
+Mar  8 14:03:14 10.71.57.0 u66531954 open "/img/home/5.jpg" flags READ mode 0666
+Mar  8 14:03:14 10.71.57.0 u66531954 close "/img/home/abs1.jpg" bytes read 530610 written 0
+Mar  8 14:03:14 10.71.57.0 u66531954 [10.71.57.0|get|1|530610|0|0|0|2f696d672f686f6d652f616273312e6a7067|]
+Mar  8 14:03:14 10.71.57.0 u66531954 close "/img/home/5.jpg" bytes read 316827 written 0
+Mar  8 14:03:14 10.71.57.0 u66531954 [10.71.57.0|get|0|316827|0|0|0|2f696d672f686f6d652f352e6a7067|]
+Mar  8 14:03:14 10.71.57.0 u66531954 open "/img/home/4.jpg" flags READ mode 0666
+Mar  8 14:03:14 10.71.57.0 u66531954 open "/img/home/3.jpg" flags READ mode 0666
+Mar  8 14:03:14 10.71.57.0 u66531954 close "/img/home/4.jpg" bytes read 172605 written 0
+Mar  8 14:03:14 10.71.57.0 u66531954 [10.71.57.0|get|0|172605|0|0|0|2f696d672f686f6d652f342e6a7067|]
+Mar  8 14:03:14 10.71.57.0 u66531954 close "/img/home/3.jpg" bytes read 187047 written 0
+Mar  8 14:03:14 10.71.57.0 u66531954 [10.71.57.0|get|0|187047|0|0|0|2f696d672f686f6d652f332e6a7067|]
+Mar  8 14:03:14 10.71.57.0 u66531954 open "/img/resiliencia/resiliencia4.jpg" flags READ mode 0666
+Mar  8 14:03:14 10.71.57.0 u66531954 open "/img/resiliencia/resiliencia3.jpg" flags READ mode 0666
+Mar  8 14:03:14 10.71.57.0 u66531954 close "/img/resiliencia/resiliencia4.jpg" bytes read 183129 written 0
+Mar  8 14:03:14 10.71.57.0 u66531954 [10.71.57.0|get|0|183129|0|0|0|2f696d672f726573696c69656e6369612f726573696c69656e636961342e6a7067|]
+Mar  8 14:03:14 10.71.57.0 u66531954 close "/img/resiliencia/resiliencia3.jpg" bytes read 91489 written 0
+Mar  8 14:03:14 10.71.57.0 u66531954 [10.71.57.0|get|0|91489|0|0|0|2f696d672f726573696c69656e6369612f726573696c69656e636961332e6a7067|]
+Mar  8 14:03:14 10.71.57.0 u66531954 open "/img/resiliencia/resiliencia2.jpg" flags READ mode 0666
+Mar  8 14:03:14 10.71.57.0 u66531954 open "/img/resiliencia/resiliencia1.jpg" flags READ mode 0666
+Mar  8 14:03:15 10.71.57.0 u66531954 close "/img/resiliencia/resiliencia2.jpg" bytes read 227335 written 0
+Mar  8 14:03:15 10.71.57.0 u66531954 [10.71.57.0|get|1|227335|0|0|0|2f696d672f726573696c69656e6369612f726573696c69656e636961322e6a7067|]
+Mar  8 14:03:15 10.71.57.0 u66531954 close "/img/resiliencia/resiliencia1.jpg" bytes read 133511 written 0
+Mar  8 14:03:15 10.71.57.0 u66531954 [10.71.57.0|get|1|133511|0|0|0|2f696d672f726573696c69656e6369612f726573696c69656e636961312e6a7067|]
+Mar  8 14:03:15 10.71.57.0 u66531954 open "/img/restosvisuales/subluxacionesimagen1.jpg" flags READ mode 0666
+Mar  8 14:03:15 10.71.57.0 u66531954 open "/img/restosvisuales/abs81.jpg" flags READ mode 0666
+Mar  8 14:03:15 10.71.57.0 u66531954 close "/img/restosvisuales/abs81.jpg" bytes read 199016 written 0
+Mar  8 14:03:15 10.71.57.0 u66531954 [10.71.57.0|get|0|199016|0|0|0|2f696d672f726573746f7376697375616c65732f61627338312e6a7067|]
+Mar  8 14:03:15 10.71.57.0 u66531954 open "/img/restosvisuales/abs77.jpg" flags READ mode 0666
+Mar  8 14:03:15 10.71.57.0 u66531954 close "/img/restosvisuales/subluxacionesimagen1.jpg" bytes read 1758501 written 0
+Mar  8 14:03:15 10.71.57.0 u66531954 [10.71.57.0|get|0|1758501|0|0|0|2f696d672f726573746f7376697375616c65732f7375626c75786163696f6e6573696d6167656e312e6a7067|]
+Mar  8 14:03:15 10.71.57.0 u66531954 close "/img/restosvisuales/abs77.jpg" bytes read 419385 written 0
+Mar  8 14:03:15 10.71.57.0 u66531954 [10.71.57.0|get|0|419385|0|0|0|2f696d672f726573746f7376697375616c65732f61627337372e6a7067|]
+Mar  8 14:03:15 10.71.57.0 u66531954 open "/img/restosvisuales/abs7.jpg" flags READ mode 0666
+Mar  8 14:03:15 10.71.57.0 u66531954 open "/img/restosvisuales/abs6.jpg" flags READ mode 0666
+Mar  8 14:03:15 10.71.57.0 u66531954 close "/img/restosvisuales/abs7.jpg" bytes read 327536 written 0
+Mar  8 14:03:15 10.71.57.0 u66531954 [10.71.57.0|get|0|327536|0|0|0|2f696d672f726573746f7376697375616c65732f616273372e6a7067|]
+Mar  8 14:03:16 10.71.57.0 u66531954 close "/img/restosvisuales/abs6.jpg" bytes read 319813 written 0
+Mar  8 14:03:16 10.71.57.0 u66531954 [10.71.57.0|get|1|319813|0|0|0|2f696d672f726573746f7376697375616c65732f616273362e6a7067|]
+Mar  8 14:03:16 10.71.57.0 u66531954 open "/img/restosvisuales/abs5.jpg" flags READ mode 0666
+Mar  8 14:03:16 10.71.57.0 u66531954 open "/img/restosvisuales/abs4.jpg" flags READ mode 0666
+Mar  8 14:03:16 10.71.57.0 u66531954 close "/img/restosvisuales/abs5.jpg" bytes read 448291 written 0
+Mar  8 14:03:16 10.71.57.0 u66531954 [10.71.57.0|get|0|448291|0|0|0|2f696d672f726573746f7376697375616c65732f616273352e6a7067|]
+Mar  8 14:03:16 10.71.57.0 u66531954 close "/img/restosvisuales/abs4.jpg" bytes read 549066 written 0
+Mar  8 14:03:16 10.71.57.0 u66531954 [10.71.57.0|get|0|549066|0|0|0|2f696d672f726573746f7376697375616c65732f616273342e6a7067|]
+Mar  8 14:03:16 10.71.57.0 u66531954 open "/img/restosvisuales/abs3.jpg" flags READ mode 0666
+Mar  8 14:03:16 10.71.57.0 u66531954 open "/img/restosvisuales/abs2.jpg" flags READ mode 0666
+Mar  8 14:03:16 10.71.57.0 u66531954 close "/img/restosvisuales/abs3.jpg" bytes read 796498 written 0
+Mar  8 14:03:16 10.71.57.0 u66531954 [10.71.57.0|get|0|796498|0|0|0|2f696d672f726573746f7376697375616c65732f616273332e6a7067|]
+Mar  8 14:03:16 10.71.57.0 u66531954 close "/img/restosvisuales/abs2.jpg" bytes read 711212 written 0
+Mar  8 14:03:16 10.71.57.0 u66531954 [10.71.57.0|get|0|711212|0|0|0|2f696d672f726573746f7376697375616c65732f616273322e6a7067|]
+Mar  8 14:03:16 10.71.57.0 u66531954 open "/img/restosvisuales/abs1.jpg" flags READ mode 0666
+Mar  8 14:03:16 10.71.57.0 u66531954 close "/img/restosvisuales/abs1.jpg" bytes read 530610 written 0
+Mar  8 14:03:16 10.71.57.0 u66531954 [10.71.57.0|get|0|530610|0|0|0|2f696d672f726573746f7376697375616c65732f616273312e6a7067|]
+Mar  8 14:03:16 10.71.57.0 u66531954 open "/img/stratos/stratos4.jpg" flags READ mode 0666
+Mar  8 14:03:17 10.71.57.0 u66531954 open "/img/stratos/stratos3.jpg" flags READ mode 0666
+Mar  8 14:03:17 10.71.57.0 u66531954 close "/img/stratos/stratos4.jpg" bytes read 945667 written 0
+Mar  8 14:03:17 10.71.57.0 u66531954 [10.71.57.0|get|1|945667|0|0|0|2f696d672f73747261746f732f73747261746f73342e6a7067|]
+Mar  8 14:03:17 10.71.57.0 u66531954 open "/img/stratos/stratos2.jpg" flags READ mode 0666
+Mar  8 14:03:17 10.71.57.0 u66531954 close "/img/stratos/stratos3.jpg" bytes read 3363032 written 0
+Mar  8 14:03:17 10.71.57.0 u66531954 [10.71.57.0|get|0|3363032|0|0|0|2f696d672f73747261746f732f73747261746f73332e6a7067|]
+Mar  8 14:03:17 10.71.57.0 u66531954 close "/img/stratos/stratos2.jpg" bytes read 2331976 written 0
+Mar  8 14:03:17 10.71.57.0 u66531954 [10.71.57.0|get|0|2331976|0|0|0|2f696d672f73747261746f732f73747261746f73322e6a7067|]
+Mar  8 14:03:17 10.71.57.0 u66531954 open "/img/stratos/stratos1.jpg" flags READ mode 0666
+Mar  8 14:03:18 10.71.57.0 u66531954 open "/img/subluxaciones/9.jpg" flags READ mode 0666
+Mar  8 14:03:18 10.71.57.0 u66531954 close "/img/subluxaciones/9.jpg" bytes read 334068 written 0
+Mar  8 14:03:18 10.71.57.0 u66531954 [10.71.57.0|get|0|334068|0|0|0|2f696d672f7375626c75786163696f6e65732f392e6a7067|]
+Mar  8 14:03:18 10.71.57.0 u66531954 open "/img/subluxaciones/7.jpg" flags READ mode 0666
+Mar  8 14:03:18 10.71.57.0 u66531954 close "/img/subluxaciones/7.jpg" bytes read 324384 written 0
+Mar  8 14:03:18 10.71.57.0 u66531954 [10.71.57.0|get|0|324384|0|0|0|2f696d672f7375626c75786163696f6e65732f372e6a7067|]
+Mar  8 14:03:18 10.71.57.0 u66531954 close "/img/stratos/stratos1.jpg" bytes read 3177281 written 0
+Mar  8 14:03:18 10.71.57.0 u66531954 [10.71.57.0|get|1|3177281|0|0|0|2f696d672f73747261746f732f73747261746f73312e6a7067|]
+Mar  8 14:03:18 10.71.57.0 u66531954 open "/img/subluxaciones/5.jpg" flags READ mode 0666
+Mar  8 14:03:18 10.71.57.0 u66531954 close "/img/subluxaciones/5.jpg" bytes read 128775 written 0
+Mar  8 14:03:18 10.71.57.0 u66531954 [10.71.57.0|get|0|128775|0|0|0|2f696d672f7375626c75786163696f6e65732f352e6a7067|]
+Mar  8 14:03:18 10.71.57.0 u66531954 open "/img/subluxaciones/4.jpg" flags READ mode 0666
+Mar  8 14:03:18 10.71.57.0 u66531954 open "/img/subluxaciones/3.jpg" flags READ mode 0666
+Mar  8 14:03:18 10.71.57.0 u66531954 close "/img/subluxaciones/4.jpg" bytes read 211567 written 0
+Mar  8 14:03:18 10.71.57.0 u66531954 [10.71.57.0|get|0|211567|0|0|0|2f696d672f7375626c75786163696f6e65732f342e6a7067|]
+Mar  8 14:03:19 10.71.57.0 u66531954 close "/img/subluxaciones/3.jpg" bytes read 258339 written 0
+Mar  8 14:03:19 10.71.57.0 u66531954 [10.71.57.0|get|1|258339|0|0|0|2f696d672f7375626c75786163696f6e65732f332e6a7067|]
+Mar  8 14:03:19 10.71.57.0 u66531954 open "/img/subluxaciones/2.jpg" flags READ mode 0666
+Mar  8 14:03:19 10.71.57.0 u66531954 open "/img/subluxaciones/15.jpg" flags READ mode 0666
+Mar  8 14:03:19 10.71.57.0 u66531954 close "/img/subluxaciones/2.jpg" bytes read 237674 written 0
+Mar  8 14:03:19 10.71.57.0 u66531954 [10.71.57.0|get|0|237674|0|0|0|2f696d672f7375626c75786163696f6e65732f322e6a7067|]
+Mar  8 14:03:19 10.71.57.0 u66531954 close "/img/subluxaciones/15.jpg" bytes read 234198 written 0
+Mar  8 14:03:19 10.71.57.0 u66531954 [10.71.57.0|get|0|234198|0|0|0|2f696d672f7375626c75786163696f6e65732f31352e6a7067|]
+Mar  8 14:03:19 10.71.57.0 u66531954 open "/img/subluxaciones/13.jpg" flags READ mode 0666
+Mar  8 14:03:19 10.71.57.0 u66531954 open "/img/subluxaciones/10.jpg" flags READ mode 0666
+Mar  8 14:03:19 10.71.57.0 u66531954 close "/img/subluxaciones/13.jpg" bytes read 268906 written 0
+Mar  8 14:03:19 10.71.57.0 u66531954 [10.71.57.0|get|0|268906|0|0|0|2f696d672f7375626c75786163696f6e65732f31332e6a7067|]
+Mar  8 14:03:19 10.71.57.0 u66531954 close "/img/subluxaciones/10.jpg" bytes read 262920 written 0
+Mar  8 14:03:19 10.71.57.0 u66531954 [10.71.57.0|get|0|262920|0|0|0|2f696d672f7375626c75786163696f6e65732f31302e6a7067|]
+Mar  8 14:03:19 10.71.57.0 u66531954 open "/img/subluxaciones/1.jpg" flags READ mode 0666
+Mar  8 14:03:19 10.71.57.0 u66531954 open "/js/tipsy.js" flags READ mode 0666
+Mar  8 14:03:19 10.71.57.0 u66531954 close "/img/subluxaciones/1.jpg" bytes read 227011 written 0
+Mar  8 14:03:19 10.71.57.0 u66531954 [10.71.57.0|get|0|227011|0|0|0|2f696d672f7375626c75786163696f6e65732f312e6a7067|]
+Mar  8 14:03:19 10.71.57.0 u66531954 close "/js/tipsy.js" bytes read 4638 written 0
+Mar  8 14:03:19 10.71.57.0 u66531954 [10.71.57.0|get|0|4638|0|0|0|2f6a732f74697073792e6a73|]
+Mar  8 14:03:20 10.71.57.0 u66531954 open "/js/selectivizr-min.js" flags READ mode 0666
+Mar  8 14:03:20 10.71.57.0 u66531954 open "/js/superfish.js" flags READ mode 0666
+Mar  8 14:03:20 10.71.57.0 u66531954 close "/js/selectivizr-min.js" bytes read 4837 written 0
+Mar  8 14:03:20 10.71.57.0 u66531954 [10.71.57.0|get|0|4837|0|0|0|2f6a732f73656c6563746976697a722d6d696e2e6a73|]
+Mar  8 14:03:20 10.71.57.0 u66531954 close "/js/superfish.js" bytes read 3714 written 0
+Mar  8 14:03:20 10.71.57.0 u66531954 [10.71.57.0|get|0|3714|0|0|0|2f6a732f7375706572666973682e6a73|]
+Mar  8 14:03:20 10.71.57.0 u66531954 open "/js/scripts.js" flags READ mode 0666
+Mar  8 14:03:20 10.71.57.0 u66531954 open "/js/respond.js" flags READ mode 0666
+Mar  8 14:03:20 10.71.57.0 u66531954 close "/js/scripts.js" bytes read 8913 written 0
+Mar  8 14:03:20 10.71.57.0 u66531954 [10.71.57.0|get|0|8913|0|0|0|2f6a732f736372697074732e6a73|]
+Mar  8 14:03:20 10.71.57.0 u66531954 close "/js/respond.js" bytes read 9527 written 0
+Mar  8 14:03:20 10.71.57.0 u66531954 [10.71.57.0|get|0|9527|0|0|0|2f6a732f726573706f6e642e6a73|]
+Mar  8 14:03:20 10.71.57.0 u66531954 open "/js/portfolio.js" flags READ mode 0666
+Mar  8 14:03:20 10.71.57.0 u66531954 open "/js/main.js" flags READ mode 0666
+Mar  8 14:03:20 10.71.57.0 u66531954 close "/js/portfolio.js" bytes read 1367 written 0
+Mar  8 14:03:20 10.71.57.0 u66531954 [10.71.57.0|get|0|1367|0|0|0|2f6a732f706f7274666f6c696f2e6a73|]
+Mar  8 14:03:20 10.71.57.0 u66531954 close "/js/main.js" bytes read 2990 written 0
+Mar  8 14:03:20 10.71.57.0 u66531954 [10.71.57.0|get|0|2990|0|0|0|2f6a732f6d61696e2e6a73|]
+Mar  8 14:03:20 10.71.57.0 u66531954 open "/js/jquery.themepunch.revolution.min.js" flags READ mode 0666
+Mar  8 14:03:20 10.71.57.0 u66531954 open "/js/jquery.themepunch.plugins.min.js" flags READ mode 0666
+Mar  8 14:03:20 10.71.57.0 u66531954 close "/js/jquery.themepunch.revolution.min.js" bytes read 56228 written 0
+Mar  8 14:03:20 10.71.57.0 u66531954 [10.71.57.0|get|0|56228|0|0|0|2f6a732f6a71756572792e7468656d6570756e63682e7265766f6c7574696f6e2e6d696e2e6a73|]
+Mar  8 14:03:20 10.71.57.0 u66531954 close "/js/jquery.themepunch.plugins.min.js" bytes read 17249 written 0
+Mar  8 14:03:20 10.71.57.0 u66531954 [10.71.57.0|get|0|17249|0|0|0|2f6a732f6a71756572792e7468656d6570756e63682e706c7567696e732e6d696e2e6a73|]
+Mar  8 14:03:20 10.71.57.0 u66531954 open "/js/jquery.js" flags READ mode 0666
+Mar  8 14:03:21 10.71.57.0 u66531954 open "/js/jquery.form.min.js" flags READ mode 0666
+Mar  8 14:03:21 10.71.57.0 u66531954 close "/js/jquery.js" bytes read 93085 written 0
+Mar  8 14:03:21 10.71.57.0 u66531954 [10.71.57.0|get|1|93085|0|0|0|2f6a732f6a71756572792e6a73|]
+Mar  8 14:03:21 10.71.57.0 u66531954 close "/js/jquery.form.min.js" bytes read 16305 written 0
+Mar  8 14:03:21 10.71.57.0 u66531954 [10.71.57.0|get|0|16305|0|0|0|2f6a732f6a71756572792e666f726d2e6d696e2e6a73|]
+Mar  8 14:03:21 10.71.57.0 u66531954 open "/js/jquery-migrate.min.js" flags READ mode 0666
+Mar  8 14:03:21 10.71.57.0 u66531954 open "/js/isotope.min.js" flags READ mode 0666
+Mar  8 14:03:21 10.71.57.0 u66531954 close "/js/jquery-migrate.min.js" bytes read 7199 written 0
+Mar  8 14:03:21 10.71.57.0 u66531954 [10.71.57.0|get|0|7199|0|0|0|2f6a732f6a71756572792d6d6967726174652e6d696e2e6a73|]
+Mar  8 14:03:21 10.71.57.0 u66531954 close "/js/isotope.min.js" bytes read 15876 written 0
+Mar  8 14:03:21 10.71.57.0 u66531954 [10.71.57.0|get|0|15876|0|0|0|2f6a732f69736f746f70652e6d696e2e6a73|]
+Mar  8 14:03:21 10.71.57.0 u66531954 open "/js/hoverIntent.js" flags READ mode 0666
+Mar  8 14:03:21 10.71.57.0 u66531954 open "/js/gototop.js" flags READ mode 0666
+Mar  8 14:03:21 10.71.57.0 u66531954 close "/js/hoverIntent.js" bytes read 3174 written 0
+Mar  8 14:03:21 10.71.57.0 u66531954 [10.71.57.0|get|0|3174|0|0|0|2f6a732f686f766572496e74656e742e6a73|]
+Mar  8 14:03:21 10.71.57.0 u66531954 close "/js/gototop.js" bytes read 568 written 0
+Mar  8 14:03:21 10.71.57.0 u66531954 [10.71.57.0|get|0|568|0|0|0|2f6a732f676f746f746f702e6a73|]
+Mar  8 14:03:21 10.71.57.0 u66531954 open "/js/cookie.js" flags READ mode 0666
+Mar  8 14:03:21 10.71.57.0 u66531954 open "/js/comment-reply.min.js" flags READ mode 0666
+Mar  8 14:03:21 10.71.57.0 u66531954 close "/js/cookie.js" bytes read 2320 written 0
+Mar  8 14:03:21 10.71.57.0 u66531954 [10.71.57.0|get|0|2320|0|0|0|2f6a732f636f6f6b69652e6a73|]
+Mar  8 14:03:21 10.71.57.0 u66531954 close "/js/comment-reply.min.js" bytes read 786 written 0
+Mar  8 14:03:21 10.71.57.0 u66531954 [10.71.57.0|get|0|786|0|0|0|2f6a732f636f6d6d656e742d7265706c792e6d696e2e6a73|]
+Mar  8 14:03:22 10.71.57.0 u66531954 open "/logs/access.log.10.7" flags READ mode 0666
+Mar  8 14:03:22 10.71.57.0 u66531954 open "/logs/access.log.09.3.gz" flags READ mode 0666
+Mar  8 14:03:22 10.71.57.0 u66531954 close "/logs/access.log.10.7" bytes read 84375 written 0
+Mar  8 14:03:22 10.71.57.0 u66531954 [10.71.57.0|get|0|84375|0|0|0|2f6c6f67732f6163636573732e6c6f672e31302e37|]
+Mar  8 14:03:22 10.71.57.0 u66531954 close "/logs/access.log.09.3.gz" bytes read 2784 written 0
+Mar  8 14:03:22 10.71.57.0 u66531954 [10.71.57.0|get|0|2784|0|0|0|2f6c6f67732f6163636573732e6c6f672e30392e332e677a|]
+Mar  8 14:03:22 10.71.57.0 u66531954 open "/logs/access.log.02.gz" flags READ mode 0666
+Mar  8 14:03:22 10.71.57.0 u66531954 open "/logs/access.log.10.6.gz" flags READ mode 0666
+Mar  8 14:03:22 10.71.57.0 u66531954 close "/logs/access.log.10.6.gz" bytes read 3484 written 0
+Mar  8 14:03:22 10.71.57.0 u66531954 [10.71.57.0|get|0|3484|0|0|0|2f6c6f67732f6163636573732e6c6f672e31302e362e677a|]
+Mar  8 14:03:22 10.71.57.0 u66531954 close "/logs/access.log.02.gz" bytes read 18063 written 0
+Mar  8 14:03:22 10.71.57.0 u66531954 [10.71.57.0|get|0|18063|0|0|0|2f6c6f67732f6163636573732e6c6f672e30322e677a|]
+Mar  8 14:03:22 10.71.57.0 u66531954 open "/logs/access.log.10.4.gz" flags READ mode 0666
+Mar  8 14:03:22 10.71.57.0 u66531954 open "/logs/access.log.10.3.gz" flags READ mode 0666
+Mar  8 14:03:22 10.71.57.0 u66531954 close "/logs/access.log.10.4.gz" bytes read 2843 written 0
+Mar  8 14:03:22 10.71.57.0 u66531954 [10.71.57.0|get|0|2843|0|0|0|2f6c6f67732f6163636573732e6c6f672e31302e342e677a|]
+Mar  8 14:03:22 10.71.57.0 u66531954 close "/logs/access.log.10.3.gz" bytes read 2495 written 0
+Mar  8 14:03:22 10.71.57.0 u66531954 [10.71.57.0|get|0|2495|0|0|0|2f6c6f67732f6163636573732e6c6f672e31302e332e677a|]
+Mar  8 14:03:22 10.71.57.0 u66531954 open "/logs/access.log.10.2.gz" flags READ mode 0666
+Mar  8 14:03:22 10.71.57.0 u66531954 open "/logs/access.log.10.1.gz" flags READ mode 0666
+Mar  8 14:03:22 10.71.57.0 u66531954 close "/logs/access.log.10.2.gz" bytes read 3968 written 0
+Mar  8 14:03:22 10.71.57.0 u66531954 [10.71.57.0|get|0|3968|0|0|0|2f6c6f67732f6163636573732e6c6f672e31302e322e677a|]
+Mar  8 14:03:22 10.71.57.0 u66531954 close "/logs/access.log.10.1.gz" bytes read 2034 written 0
+Mar  8 14:03:22 10.71.57.0 u66531954 [10.71.57.0|get|0|2034|0|0|0|2f6c6f67732f6163636573732e6c6f672e31302e312e677a|]
+Mar  8 14:03:23 10.71.57.0 u66531954 open "/logs/access.log.08.gz" flags READ mode 0666
+Mar  8 14:03:23 10.71.57.0 u66531954 open "/logs/access.log.09.7.gz" flags READ mode 0666
+Mar  8 14:03:23 10.71.57.0 u66531954 close "/logs/access.log.09.7.gz" bytes read 1699 written 0
+Mar  8 14:03:23 10.71.57.0 u66531954 [10.71.57.0|get|0|1699|0|0|0|2f6c6f67732f6163636573732e6c6f672e30392e372e677a|]
+Mar  8 14:03:23 10.71.57.0 u66531954 close "/logs/access.log.08.gz" bytes read 48434 written 0
+Mar  8 14:03:23 10.71.57.0 u66531954 [10.71.57.0|get|0|48434|0|0|0|2f6c6f67732f6163636573732e6c6f672e30382e677a|]
+Mar  8 14:03:23 10.71.57.0 u66531954 open "/logs/access.log.09.5.gz" flags READ mode 0666
+Mar  8 14:03:23 10.71.57.0 u66531954 open "/logs/access.log.07.gz" flags READ mode 0666
+Mar  8 14:03:23 10.71.57.0 u66531954 close "/logs/access.log.09.5.gz" bytes read 3933 written 0
+Mar  8 14:03:23 10.71.57.0 u66531954 [10.71.57.0|get|0|3933|0|0|0|2f6c6f67732f6163636573732e6c6f672e30392e352e677a|]
+Mar  8 14:03:23 10.71.57.0 u66531954 close "/logs/access.log.07.gz" bytes read 49732 written 0
+Mar  8 14:03:23 10.71.57.0 u66531954 [10.71.57.0|get|0|49732|0|0|0|2f6c6f67732f6163636573732e6c6f672e30372e677a|]
+Mar  8 14:03:23 10.71.57.0 u66531954 open "/logs/access.log.05.gz" flags READ mode 0666
+Mar  8 14:03:23 10.71.57.0 u66531954 open "/logs/access.log.04.gz" flags READ mode 0666
+Mar  8 14:03:23 10.71.57.0 u66531954 close "/logs/access.log.05.gz" bytes read 38989 written 0
+Mar  8 14:03:23 10.71.57.0 u66531954 [10.71.57.0|get|0|38989|0|0|0|2f6c6f67732f6163636573732e6c6f672e30352e677a|]
+Mar  8 14:03:23 10.71.57.0 u66531954 close "/logs/access.log.04.gz" bytes read 27922 written 0
+Mar  8 14:03:23 10.71.57.0 u66531954 [10.71.57.0|get|0|27922|0|0|0|2f6c6f67732f6163636573732e6c6f672e30342e677a|]
+Mar  8 14:03:23 10.71.57.0 u66531954 open "/logs/access.log.03.gz" flags READ mode 0666
+Mar  8 14:03:23 10.71.57.0 u66531954 open "/logs/access.log.09.6.gz" flags READ mode 0666
+Mar  8 14:03:23 10.71.57.0 u66531954 close "/logs/access.log.03.gz" bytes read 17109 written 0
+Mar  8 14:03:23 10.71.57.0 u66531954 [10.71.57.0|get|0|17109|0|0|0|2f6c6f67732f6163636573732e6c6f672e30332e677a|]
+Mar  8 14:03:23 10.71.57.0 u66531954 close "/logs/access.log.09.6.gz" bytes read 2740 written 0
+Mar  8 14:03:23 10.71.57.0 u66531954 [10.71.57.0|get|0|2740|0|0|0|2f6c6f67732f6163636573732e6c6f672e30392e362e677a|]
+Mar  8 14:03:24 10.71.57.0 u66531954 open "/logs/access.log.06.gz" flags READ mode 0666
+Mar  8 14:03:24 10.71.57.0 u66531954 open "/logs/info.php5" flags READ mode 0666
+Mar  8 14:03:24 10.71.57.0 u66531954 close "/logs/access.log.06.gz" bytes read 52949 written 0
+Mar  8 14:03:24 10.71.57.0 u66531954 [10.71.57.0|get|0|52949|0|0|0|2f6c6f67732f6163636573732e6c6f672e30362e677a|]
+Mar  8 14:03:24 10.71.57.0 u66531954 close "/logs/info.php5" bytes read 21 written 0
+Mar  8 14:03:24 10.71.57.0 u66531954 [10.71.57.0|get|0|21|0|0|0|2f6c6f67732f696e666f2e70687035|]
+Mar  8 14:03:24 10.71.57.0 u66531954 open "/logs/access.log.10.5.gz" flags READ mode 0666
+Mar  8 14:03:24 10.71.57.0 u66531954 open "/logs/access.log.09.1.gz" flags READ mode 0666
+Mar  8 14:03:24 10.71.57.0 u66531954 close "/logs/access.log.10.5.gz" bytes read 3903 written 0
+Mar  8 14:03:24 10.71.57.0 u66531954 [10.71.57.0|get|0|3903|0|0|0|2f6c6f67732f6163636573732e6c6f672e31302e352e677a|]
+Mar  8 14:03:24 10.71.57.0 u66531954 close "/logs/access.log.09.1.gz" bytes read 2354 written 0
+Mar  8 14:03:24 10.71.57.0 u66531954 [10.71.57.0|get|0|2354|0|0|0|2f6c6f67732f6163636573732e6c6f672e30392e312e677a|]
+Mar  8 14:03:24 10.71.57.0 u66531954 open "/logs/traffic.db" flags READ mode 0666
+Mar  8 14:03:24 10.71.57.0 u66531954 open "/logs/last_traffic" flags READ mode 0666
+Mar  8 14:03:24 10.71.57.0 u66531954 close "/logs/last_traffic" bytes read 0 written 0
+Mar  8 14:03:24 10.71.57.0 u66531954 [10.71.57.0|get|0|0|0|0|0|2f6c6f67732f6c6173745f74726166666963|]
+Mar  8 14:03:24 10.71.57.0 u66531954 close "/logs/traffic.db" bytes read 49152 written 0
+Mar  8 14:03:24 10.71.57.0 u66531954 [10.71.57.0|get|0|49152|0|0|0|2f6c6f67732f747261666669632e6462|]
+Mar  8 14:03:24 10.71.57.0 u66531954 open "/logs/sftp.log" flags READ mode 0666
