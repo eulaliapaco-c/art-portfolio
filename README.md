@@ -5,8 +5,7 @@ Bienvenido/a a mi portfolio de proyectos visuales. Este espacio constituye el ar
 ---
 
 ## 🌐 Galería y obra completa
-Para una inmersión visual completa y detallada de la obra y acceso al marco conceptual de cada proyecto, visita mi sitio web oficial:
-
+Para ver la obra completa y consultar el marco conceptual de cada proyecto, visita mi web oficial:
 👉 **http://www.paco-c.com/**
 
 ---
