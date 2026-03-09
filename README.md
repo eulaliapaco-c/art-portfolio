@@ -27,4 +27,4 @@ En este repositorio encontrarás la organización técnica de mis proyectos:
 * **Email:** eulaliapaco@gmail.com
 
 ---
-*© 2026 Paco-C | Graduado en Bellas Artes*
+*© 2026 Paco-C | Graduada en Bellas Artes*
