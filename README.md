@@ -16,9 +16,9 @@ Para una inmersión visual completa de la obra y acceso al marco conceptual de c
 ## 🛠️ Disciplinas y Enfoque
 Mi trabajo se desarrolla principalmente en las siguientes áreas:
 
-* **Pintura abstracta]**
-* **Procesos experimentales]**
-* **Fotografía Digital]**
+* **Pintura abstracta**
+* **Procesos experimentales**
+* **Fotografía Digital**
 
 ## 📂 Estructura del Repositorio
 En este repositorio encontrarás la organización técnica de mis proyectos:
