@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio · UX/UI Designer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg:        #F7F4F1;
+  --bg-card:   #FFFFFF;
+  --bg-surface:#EDE9E4;
+  --bg-subtle: #F2EEE9;
+  --tx-main:   #1A1614;
+  --tx-body:   #3D3430;
+  --tx-muted:  #7A6E6A;
+  --tx-subtle: #B0A49E;
+  --bd:        rgba(26,22,20,0.10);
+  --bd-hover:  rgba(26,22,20,0.22);
+  --accent:    #C4562A;
+  --cta:       #065F57;
+  --cta-hover: #054D46;
+  --cta-active:#033730;
+  --cta-ring:  rgba(6,95,87,0.30);
+  --ghost-bd:  rgba(6,95,87,0.32);
+  --ghost-tx:  #065F57;
+  --sh-sm: 0 1px 3px rgba(26,22,20,0.08),0 1px 2px rgba(26,22,20,0.05);
+  --sh-md: 0 4px 12px rgba(26,22,20,0.10),0 2px 4px rgba(26,22,20,0.06);
+}
+html.dark {
+  --bg:        #14100E;
+  --bg-card:   #1E1813;
+  --bg-surface:#261E18;
+  --bg-subtle: #1A1410;
+  --tx-main:   #F5F0EC;
+  --tx-body:   #D4CCC7;
+  --tx-muted:  #9A8D87;
+  --tx-subtle: #5C5250;
+  --bd:        rgba(245,240,236,0.10);
+  --bd-hover:  rgba(245,240,236,0.22);
+  --accent:    #E8763A;
+  --cta:       #0D9B8C;
+  --cta-hover: #0B8278;
+  --cta-active:#086B63;
+  --cta-ring:  rgba(13,155,140,0.35);
+  --ghost-bd:  rgba(13,155,140,0.38);
+  --ghost-tx:  #0FADA0;
+  --sh-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --sh-md: 0 4px 12px rgba(0,0,0,0.35);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx-main);min-height:100vh;overflow-x:hidden;transition:background .3s,color .3s;line-height:1.6;}
+.fd{font-family:'Syne',sans-serif;}
+.page{display:none;min-height:100vh;}
+.page.active{display:block;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;vertical-align:middle;line-height:1;}
+
+/* ── BUTTONS ── */
+.bp{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;border:2px solid transparent;padding:.7rem 1.55rem;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:.9rem;cursor:pointer;text-decoration:none;transition:background .18s,transform .12s,box-shadow .18s;outline:none;}
+.bp:hover{background:var(--cta-hover);box-shadow:var(--sh-sm);transform:translateY(-1px);}
+.bp:active{background:var(--cta-active);transform:scale(.98);box-shadow:none;}
+.bp:focus-visible{outline:3px solid var(--cta);outline-offset:3px;box-shadow:0 0 0 5px var(--cta-ring);}
+.bg{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ghost-tx);border:1.5px solid var(--ghost-bd);padding:.7rem 1.55rem;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:500;font-size:.9rem;cursor:pointer;text-decoration:none;transition:background .18s,border-color .18s,transform .12s,box-shadow .18s;outline:none;}
+.bg:hover{background:rgba(6,95,87,.07);border-color:var(--cta);transform:translateY(-1px);}
+.bg:active{background:rgba(6,95,87,.13);transform:scale(.98);}
+.bg:focus-visible{outline:3px solid var(--cta);outline-offset:3px;box-shadow:0 0 0 5px var(--cta-ring);}
+html.dark .bg:hover{background:rgba(13,155,140,.12);}
+
+/* ── LAYOUT ── */
+.con{max-width:1160px;margin:0 auto;padding:0 2rem;}
+.conN{max-width:780px;margin:0 auto;padding:0 2rem;}
+.div{height:1px;background:var(--bd);margin:2.5rem 0;}
+
+/* ── TYPE ── */
+.tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cta);border:1px solid var(--ghost-bd);padding:3px 10px;border-radius:4px;}
+.stitle{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;color:var(--tx-main);}
+.bt{color:var(--tx-body);line-height:1.75;font-size:.95rem;}
+
+/* ── CARD ── */
+.card{background:var(--bg-card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;box-shadow:var(--sh-sm);transition:border-color .2s,box-shadow .2s,transform .2s;cursor:pointer;}
+.card:hover{border-color:var(--bd-hover);box-shadow:var(--sh-md);transform:translateY(-3px);}
+
+/* ── BACK BTN ── */
+.bback{display:inline-flex;align-items:center;gap:8px;padding:.5rem 1rem .5rem .75rem;background:var(--bg-subtle);border:1px solid var(--bd);border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:500;color:var(--tx-muted);transition:border-color .2s,color .2s;margin-bottom:1.5rem;outline:none;}
+.bback:hover{border-color:var(--bd-hover);color:var(--tx-main);}
+.bback:focus-visible{outline:3px solid var(--cta);outline-offset:3px;}
+.bback .material-symbols-outlined{font-size:18px;}
+
+/* ── DESKTOP NAV ── */
+.navD{position:sticky;top:0;z-index:100;background:rgba(247,244,241,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;transition:background .3s;}
+html.dark .navD{background:rgba(20,16,14,.9);}
+.nlogo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:-.02em;color:var(--tx-main);cursor:pointer;display:flex;align-items:center;gap:10px;}
+.nldot{width:8px;height:8px;border-radius:50%;background:var(--cta);}
+.nlinks{display:flex;gap:1.75rem;align-items:center;}
+.nlinks a{font-size:.875rem;font-weight:500;color:var(--tx-muted);cursor:pointer;text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;outline:none;}
+.nlinks a:hover{color:var(--tx-main);}
+.nlinks a.on{color:var(--cta);border-bottom-color:var(--cta);}
+.nlinks a:focus-visible{outline:2px solid var(--cta);outline-offset:3px;border-radius:2px;}
+.nset{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:8px;background:var(--bg-subtle);border:1px solid var(--bd);cursor:pointer;color:var(--tx-muted);transition:background .2s,color .2s,border-color .2s;margin-left:.5rem;outline:none;}
+.nset:hover{background:var(--bg-surface);color:var(--tx-main);border-color:var(--bd-hover);}
+.nset:focus-visible{outline:3px solid var(--cta);outline-offset:3px;}
+
+/* ── MOBILE NAV ── */
+.navM{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(247,244,241,.95);backdrop-filter:blur(16px);border-top:1px solid var(--bd);padding:.6rem 1rem 1.25rem;transition:background .3s;}
+html.dark .navM{background:rgba(20,16,14,.95);}
+.navMI{display:flex;justify-content:space-around;}
+.nmi{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;color:var(--tx-subtle);transition:color .18s;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:6px;outline:none;}
+.nmi:hover{color:var(--tx-body);}
+.nmi.on{color:var(--cta);}
+.nmi:focus-visible{outline:2px solid var(--cta);outline-offset:2px;}
+.nmi .material-symbols-outlined{font-size:22px;}
+
+/* ── A11Y PANEL ── */
+.a11y{display:none;position:fixed;top:64px;right:1rem;z-index:200;background:var(--bg-card);border:1px solid var(--bd);border-radius:12px;box-shadow:var(--sh-md);padding:1.5rem;width:280px;transition:background .3s;}
+.a11y.open{display:block;}
+.a11ytitle{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:1.25rem;color:var(--tx-main);}
+.a11yrow{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;border-bottom:1px solid var(--bd);}
+.a11yrow:last-child{border-bottom:none;padding-bottom:0;}
+.a11ylabel{font-size:.875rem;font-weight:500;color:var(--tx-body);}
+.a11ysub{font-size:.75rem;color:var(--tx-muted);display:block;}
+.tog{position:relative;width:44px;height:24px;cursor:pointer;}
+.tog input{opacity:0;width:0;height:0;}
+.togT{position:absolute;inset:0;border-radius:12px;background:var(--bg-surface);border:1.5px solid var(--bd);transition:background .2s,border-color .2s;}
+.tog input:checked+.togT{background:var(--cta);border-color:var(--cta);}
+.togK{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--tx-muted);transition:transform .2s,background .2s;pointer-events:none;}
+.tog input:checked~.togK{transform:translateX(20px);background:#fff;}
+.tog:focus-within .togT{outline:3px solid var(--cta);outline-offset:2px;}
+.fctl{display:flex;align-items:center;gap:8px;}
+.fcb{width:30px;height:30px;border-radius:6px;background:var(--bg-subtle);border:1px solid var(--bd);cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;color:var(--tx-body);transition:background .15s,border-color .15s;outline:none;}
+.fcb:hover{background:var(--bg-surface);border-color:var(--cta);color:var(--cta);}
+.fcb:focus-visible{outline:2px solid var(--cta);outline-offset:2px;}
+.fcv{font-size:.85rem;font-weight:600;color:var(--tx-main);min-width:34px;text-align:center;}
+.ltog{display:flex;gap:6px;}
+.lbtn{padding:4px 12px;border-radius:6px;font-size:.78rem;font-weight:700;letter-spacing:.05em;border:1.5px solid var(--bd);background:var(--bg-subtle);cursor:pointer;color:var(--tx-muted);transition:background .15s,border-color .15s,color .15s;outline:none;}
+.lbtn.on{background:var(--cta);border-color:var(--cta);color:#fff;}
+.lbtn:hover:not(.on){border-color:var(--cta);color:var(--cta);}
+.lbtn:focus-visible{outline:3px solid var(--cta);outline-offset:2px;}
+
+/* ── HOME ── */
+.hero{min-height:88vh;display:flex;align-items:center;padding:5rem 2rem 3rem;position:relative;overflow:hidden;}
+.htint{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 60% at 75% 45%,rgba(6,95,87,.06) 0%,transparent 65%);}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:var(--bg-card);border:1px solid var(--bd);border-radius:100px;padding:6px 14px 6px 10px;font-size:.78rem;font-weight:500;color:var(--tx-muted);margin-bottom:2rem;box-shadow:var(--sh-sm);}
+.hdot{width:7px;height:7px;border-radius:50%;background:#22c55e;animation:pulse 2.5s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.htitle{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7.5vw,6rem);font-weight:800;line-height:.95;letter-spacing:-.04em;color:var(--tx-main);margin-bottom:1.5rem;}
+.htitle .acc{color:var(--accent);}
+.hsub{font-size:clamp(1rem,2vw,1.15rem);color:var(--tx-body);line-height:1.72;max-width:500px;margin-bottom:2.5rem;font-weight:300;}
+.hstats{display:flex;gap:3rem;margin-top:4rem;padding-top:2.5rem;border-top:1px solid var(--bd);flex-wrap:wrap;}
+.snum{font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;color:var(--cta);}
+.slbl{font-size:.78rem;color:var(--tx-muted);font-weight:500;}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:4rem 2rem;max-width:1160px;margin:0 auto;}
+.pcimg{height:185px;background:var(--bg-subtle);display:flex;align-items:center;justify-content:center;position:relative;}
+.pclbl{position:absolute;bottom:10px;left:10px;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-muted);background:var(--bg-card);padding:3px 8px;border-radius:4px;box-shadow:var(--sh-sm);}
+.pcbody{padding:1.4rem;}
+.pccta{display:flex;align-items:center;gap:5px;color:var(--cta);font-size:.83rem;font-weight:600;margin-top:.875rem;transition:gap .2s;}
+.card:hover .pccta{gap:9px;}
+.atease{background:var(--bg-card);border:1px solid var(--bd);border-radius:16px;overflow:hidden;max-width:1160px;margin:0 auto 5rem;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--sh-sm);}
+.atecon{padding:3rem;}
+.amg{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:1.5rem 1.5rem 1.5rem 0;}
+.am{border-radius:8px;aspect-ratio:1;background:var(--bg-subtle);overflow:hidden;border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;}
+
+/* ── PROJECTS ── */
+.ph{padding:4rem 2rem 2rem;max-width:1160px;margin:0 auto;border-bottom:1px solid var(--bd);}
+.pl{max-width:1160px;margin:0 auto;padding:2rem 2rem 5rem;display:flex;flex-direction:column;gap:1.25rem;}
+.prow{background:var(--bg-card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:260px 1fr;box-shadow:var(--sh-sm);transition:border-color .2s,box-shadow .2s,transform .2s;cursor:pointer;}
+.prow:hover{border-color:var(--bd-hover);box-shadow:var(--sh-md);transform:translateY(-2px);}
+.primg{background:var(--bg-subtle);display:flex;align-items:center;justify-content:center;min-height:180px;}
+.prbody{padding:2rem;}
+.pmeta{display:flex;gap:1.25rem;margin:.875rem 0;font-size:.78rem;color:var(--tx-muted);flex-wrap:wrap;}
+.pmeta span{display:flex;align-items:center;gap:4px;}
+.pmeta .material-symbols-outlined{font-size:14px;}
+.prcta{display:flex;align-items:center;gap:5px;color:var(--cta);font-size:.83rem;font-weight:600;transition:gap .2s;}
+.prow:hover .prcta{gap:9px;}
+
+/* ── CASE STUDY ── */
+.csh{padding:3rem 2rem 2rem;max-width:780px;margin:0 auto;}
+.csmg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bd);border-radius:10px;overflow:hidden;margin:2rem 0;}
+.csmi{background:var(--bg-card);padding:1.125rem;border-right:1px solid var(--bd);}
+.csmi:last-child{border-right:none;}
+.csmk{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--tx-subtle);margin-bottom:4px;}
+.csmv{font-size:.875rem;font-weight:600;color:var(--tx-main);}
+.csb{max-width:780px;margin:0 auto;padding:0 2rem 5rem;}
+.cssec{margin-bottom:3.25rem;}
+.csstitle{font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:700;margin-bottom:1rem;color:var(--tx-main);display:flex;align-items:center;gap:10px;}
+.csstitle .material-symbols-outlined{color:var(--cta);font-size:20px;}
+.csq{border-left:3px solid var(--cta);padding:1.125rem 1.375rem;background:rgba(6,95,87,.05);border-radius:0 8px 8px 0;font-style:italic;color:var(--tx-body);margin:1.25rem 0;font-size:.95rem;line-height:1.75;}
+html.dark .csq{background:rgba(13,155,140,.07);}
+.rcs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;}
+.rc{padding:1.125rem;border-radius:8px;background:rgba(6,95,87,.05);border:1px solid rgba(6,95,87,.14);}
+html.dark .rc{background:rgba(13,155,140,.07);border-color:rgba(13,155,140,.2);}
+.rct{font-weight:700;color:var(--cta);margin-bottom:.4rem;font-size:.875rem;}
+.rcx{font-size:.83rem;color:var(--tx-muted);line-height:1.55;}
+.resgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.rescard{background:rgba(6,95,87,.06);border:1px solid rgba(6,95,87,.17);border-radius:10px;padding:1.5rem;text-align:center;}
+html.dark .rescard{background:rgba(13,155,140,.08);border-color:rgba(13,155,140,.22);}
+.resnum{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:var(--cta);}
+.reslbl{font-size:.68rem;font-weight:700;letter-spacing:.1em;color:var(--tx-muted);text-transform:uppercase;margin-top:2px;}
+.wfg{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;}
+.wfb{aspect-ratio:3/4;background:var(--bg-subtle);border:1.5px dashed rgba(6,95,87,.22);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;letter-spacing:.1em;color:rgba(6,95,87,.38);text-transform:uppercase;}
+.ptob{background:var(--bg-subtle);border:1px solid var(--bd);border-radius:12px;aspect-ratio:16/7;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;}
+.ptobi{text-align:center;color:var(--tx-subtle);}
+.ptobi .material-symbols-outlined{font-size:44px;display:block;margin-bottom:.5rem;}
+.ptobiL{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+
+/* ── ABOUT ── */
+.abh{padding:4rem 2rem 2.5rem;max-width:860px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:start;}
+.abav{width:152px;height:152px;border-radius:16px;background:var(--bg-subtle);border:2px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:4rem;flex-shrink:0;position:relative;overflow:hidden;}
+.abav::after{content:'';position:absolute;bottom:10px;right:10px;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2px solid var(--bg-card);}
+.abname{font-family:'Syne',sans-serif;font-size:1.85rem;font-weight:800;margin-bottom:3px;color:var(--tx-main);}
+.abrole{color:var(--cta);font-weight:500;margin-bottom:.75rem;font-size:.95rem;}
+.abbtns{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem;}
+.abody{max-width:860px;margin:0 auto;padding:0 2rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+.abseclbl{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cta);margin-bottom:1.125rem;}
+.fi{display:flex;align-items:center;gap:.875rem;padding:.825rem 1rem;background:var(--bg-subtle);border:1px solid var(--bd);border-radius:8px;margin-bottom:.5rem;font-weight:500;font-size:.875rem;color:var(--tx-body);transition:border-color .2s;}
+.fi:hover{border-color:var(--ghost-bd);}
+.fico{width:34px;height:34px;border-radius:8px;background:rgba(6,95,87,.1);flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.fico .material-symbols-outlined{color:var(--cta);font-size:17px;}
+.stag{display:inline-block;background:var(--bg-subtle);border:1px solid var(--bd);border-radius:6px;padding:5px 12px;font-size:.83rem;font-weight:500;margin:3px;color:var(--tx-body);transition:border-color .18s,color .18s;cursor:default;}
+.stag:hover{border-color:var(--ghost-bd);color:var(--cta);}
+.sgl{font-size:.68rem;color:var(--tx-subtle);font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin:1rem 0 .5rem;}
+
+/* ── ART ── */
+.arth{padding:4rem 2rem 2rem;max-width:1160px;margin:0 auto;}
+.artbio{background:var(--bg-card);border:1px solid var(--bd);border-radius:12px;padding:1.75rem;margin-bottom:2.5rem;display:grid;grid-template-columns:4px 1fr;gap:1.375rem;box-shadow:var(--sh-sm);}
+.artbiobar{background:var(--cta);border-radius:4px;}
+.artgal{max-width:1160px;margin:0 auto;padding:0 2rem 5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.artc{background:var(--bg-card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;cursor:pointer;box-shadow:var(--sh-sm);transition:border-color .2s,box-shadow .2s,transform .2s;}
+.artc:hover{border-color:var(--bd-hover);box-shadow:var(--sh-md);transform:translateY(-3px);}
+.artcimg{aspect-ratio:4/5;background:var(--bg-subtle);display:flex;align-items:center;justify-content:center;font-size:3.5rem;border-bottom:1px solid var(--bd);}
+.artcbody{padding:1rem 1.2rem;}
+.artctech{font-size:.73rem;font-weight:700;color:var(--cta);}
+.artctitle{font-size:.95rem;font-weight:600;margin:2px 0;color:var(--tx-main);}
+.artcyear{font-size:.77rem;color:var(--tx-muted);font-style:italic;}
+.artdg{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.artdm{aspect-ratio:4/5;background:var(--bg-subtle);border:1px solid var(--bd);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:5rem;}
+.artdts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px;}
+.artdt{aspect-ratio:1;background:var(--bg-subtle);border:1px solid var(--bd);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;}
+
+/* ── CONTACT ── */
+.conw{max-width:680px;margin:0 auto;padding:4rem 2rem 5rem;}
+.fcard{background:var(--bg-card);border:1px solid var(--bd);border-radius:12px;padding:2rem;box-shadow:var(--sh-sm);}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:1.125rem;}
+.fgrp{margin-bottom:1.125rem;}
+.flbl{display:block;font-size:.75rem;font-weight:700;margin-bottom:.45rem;color:var(--tx-muted);text-transform:uppercase;letter-spacing:.07em;}
+.finp{width:100%;background:var(--bg-subtle);border:1px solid var(--bd);border-radius:8px;padding:.8rem 1rem;color:var(--tx-main);font-size:.9rem;font-family:'DM Sans',sans-serif;transition:border-color .18s,background .18s,box-shadow .18s;outline:none;}
+.finp::placeholder{color:var(--tx-subtle);}
+.finp:hover{border-color:var(--bd-hover);background:var(--bg-card);}
+.finp:focus{border-color:var(--cta);background:var(--bg-card);box-shadow:0 0 0 3px var(--cta-ring);}
+textarea.finp{resize:vertical;min-height:130px;}
+.socg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem;}
+.socc{background:var(--bg-card);border:1px solid var(--bd);border-radius:10px;padding:1.375rem;text-align:center;cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s;text-decoration:none;color:var(--tx-main);box-shadow:var(--sh-sm);outline:none;}
+.socc:hover{border-color:var(--ghost-bd);box-shadow:var(--sh-md);transform:translateY(-2px);}
+.socc:focus-visible{outline:3px solid var(--cta);outline-offset:3px;}
+.soci{width:46px;height:46px;border-radius:12px;background:rgba(6,95,87,.08);display:flex;align-items:center;justify-content:center;margin:0 auto .625rem;}
+.soci .material-symbols-outlined{color:var(--cta);}
+.socn{font-size:.83rem;font-weight:600;color:var(--tx-main);}
+.soch{font-size:.73rem;color:var(--tx-muted);margin-top:2px;}
+
+.toast{position:fixed;bottom:96px;left:50%;transform:translateX(-50%);background:var(--bg-card);border:1px solid rgba(34,197,94,.35);color:#16a34a;padding:.65rem 1.5rem;border-radius:8px;font-size:.875rem;font-weight:600;box-shadow:var(--sh-md);opacity:0;pointer-events:none;transition:opacity .3s;z-index:999;white-space:nowrap;}
+.toast.show{opacity:1;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){.fgrid{grid-template-columns:1fr 1fr;}.artgal{grid-template-columns:1fr 1fr;}.atease{grid-template-columns:1fr;}.amg{grid-template-columns:repeat(4,1fr);padding:0 1rem 1rem;}}
+@media(max-width:768px){
+  .navD{display:none;}.navM{display:block;}.page{padding-bottom:80px;}
+  .a11y{top:auto;bottom:90px;right:1rem;left:1rem;width:auto;}
+  .hero{padding:3rem 1.25rem 2rem;}.htitle{font-size:clamp(2.3rem,10vw,3.5rem);}
+  .fgrid{grid-template-columns:1fr;padding:2rem 1.25rem;}
+  .artgal{grid-template-columns:1fr 1fr;padding:0 1.25rem 3rem;}
+  .atease{margin:0 1.25rem 3rem;}
+  .prow{grid-template-columns:1fr;}.primg{min-height:130px;}
+  .csmg{grid-template-columns:1fr 1fr;}.csmi{border-bottom:1px solid var(--bd);}
+  .resgrid{grid-template-columns:1fr;}.wfg{grid-template-columns:1fr;}.rcs{grid-template-columns:1fr;}
+  .abh{grid-template-columns:1fr;gap:1.5rem;padding:3rem 1.25rem 2rem;}.abav{width:96px;height:96px;font-size:2.5rem;}
+  .abody{grid-template-columns:1fr;padding:0 1.25rem 3rem;}
+  .socg{grid-template-columns:1fr;}.fg2{grid-template-columns:1fr;}.artdg{grid-template-columns:1fr;}
+  .con,.conN{padding:0 1.25rem;}.ph,.pl,.csh,.csb,.arth,.artgal,.conw{padding-left:1.25rem;padding-right:1.25rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- DESKTOP NAV -->
+<nav class="navD" role="navigation" aria-label="Navegación principal">
+  <div class="nlogo" onclick="gp('home')" tabindex="0" role="link" aria-label="Inicio">
+    <div class="nldot" aria-hidden="true"></div>UX Portfolio
+  </div>
+  <div class="nlinks">
+    <a onclick="gp('proyectos')" id="n-proyectos" tabindex="0" role="button">Proyectos UX</a>
+    <a onclick="gp('sobre-mi')"  id="n-sobre-mi"  tabindex="0" role="button">Sobre Mí</a>
+    <a onclick="gp('obra')"      id="n-obra"      tabindex="0" role="button">Obra Artística</a>
+    <a onclick="gp('contacto')"  id="n-contacto"  tabindex="0" role="button">Contacto</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:.5rem;">
+    <button class="bp" onclick="gp('contacto')" style="padding:.5rem 1.2rem;font-size:.82rem;">Hablemos</button>
+    <button class="nset" onclick="togPanel()" aria-label="Opciones de accesibilidad" aria-expanded="false" id="stog">
+      <span class="material-symbols-outlined" style="font-size:20px;">settings_accessibility</span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<nav class="navM" role="navigation" aria-label="Navegación móvil">
+  <div class="navMI">
+    <div class="nmi on" id="m-home"       onclick="gp('home')"      tabindex="0" role="button"><span class="material-symbols-outlined">home</span>Inicio</div>
+    <div class="nmi"    id="m-proyectos"  onclick="gp('proyectos')" tabindex="0" role="button"><span class="material-symbols-outlined">folder</span>Proyectos</div>
+    <div class="nmi"    id="m-sobre-mi"   onclick="gp('sobre-mi')"  tabindex="0" role="button"><span class="material-symbols-outlined">person</span>Sobre mí</div>
+    <div class="nmi"    id="m-obra"       onclick="gp('obra')"      tabindex="0" role="button"><span class="material-symbols-outlined">palette</span>Arte</div>
+    <div class="nmi"    id="m-contacto"   onclick="gp('contacto')"  tabindex="0" role="button"><span class="material-symbols-outlined">mail</span>Contacto</div>
+    <div class="nmi"                      onclick="togPanel()"       tabindex="0" role="button"><span class="material-symbols-outlined">settings_accessibility</span>Acceso</div>
+  </div>
+</nav>
+
+<!-- ACCESSIBILITY PANEL -->
+<div class="a11y" id="a11y" role="dialog" aria-label="Opciones de accesibilidad" aria-modal="false">
+  <div class="a11ytitle">Opciones de visualización</div>
+  <div class="a11yrow">
+    <div><div class="a11ylabel">Modo oscuro</div><span class="a11ysub">Reduce la fatiga visual nocturna</span></div>
+    <label class="tog" aria-label="Activar modo oscuro">
+      <input type="checkbox" id="dtog" onchange="togDark(this.checked)"/>
+      <div class="togT"></div><div class="togK"></div>
+    </label>
+  </div>
+  <div class="a11yrow">
+    <div><div class="a11ylabel">Tamaño de texto</div><span class="a11ysub" id="fslbl">Base (100%)</span></div>
+    <div class="fctl">
+      <button class="fcb" onclick="chgFont(-1)" aria-label="Reducir texto">A−</button>
+      <span class="fcv" id="fsval">100%</span>
+      <button class="fcb" onclick="chgFont(+1)" aria-label="Aumentar texto">A+</button>
+    </div>
+  </div>
+  <div class="a11yrow">
+    <div><div class="a11ylabel">Idioma</div><span class="a11ysub">Contenido del portfolio</span></div>
+    <div class="ltog">
+      <button class="lbtn on" id="l-es" onclick="setLang('es')" aria-pressed="true">ES</button>
+      <button class="lbtn"    id="l-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE: HOME -->
+<main id="page-home" class="page active" aria-label="Inicio">
+  <section class="hero" aria-labelledby="hh">
+    <div class="htint" aria-hidden="true"></div>
+    <div style="max-width:1160px;margin:0 auto;width:100%;position:relative;">
+      <div class="hbadge" role="status"><div class="hdot" aria-hidden="true"></div>Disponible para proyectos</div>
+      <h1 class="htitle" id="hh">Diseño que<br/><span class="acc">conecta</span> arte<br/>y experiencia</h1>
+      <p class="hsub">UX/UI Designer con formación en Bellas Artes. Creo interfaces que funcionan perfectamente <em>y</em> que emocionan visualmente.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <button class="bp" onclick="gp('proyectos')">Ver proyectos UX <span class="material-symbols-outlined" style="font-size:17px;" aria-hidden="true">arrow_forward</span></button>
+        <button class="bg" onclick="gp('obra')">Obra artística</button>
+      </div>
+      <div class="hstats" role="list" aria-label="Resumen de experiencia">
+        <div role="listitem"><div class="snum">+8</div><div class="slbl">Proyectos UX</div></div>
+        <div role="listitem"><div class="snum">5+</div><div class="slbl">Años experiencia</div></div>
+        <div role="listitem"><div class="snum">BA</div><div class="slbl">Bellas Artes</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="fh">
+    <div class="con" style="padding-top:4rem;padding-bottom:1.5rem;">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+        <div><div class="tag" style="margin-bottom:.75rem;">Casos de estudio</div><h2 class="stitle" id="fh">Proyectos UX<br/>destacados</h2></div>
+        <button class="bg" onclick="gp('proyectos')" style="align-self:flex-end;">Ver todos <span class="material-symbols-outlined" style="font-size:16px;" aria-hidden="true">arrow_forward</span></button>
+      </div>
+    </div>
+    <div class="fgrid" role="list">
+      <article class="card" onclick="gcs('techflow')" role="listitem" tabindex="0" aria-label="Ver caso TechFlow" onkeydown="if(event.key==='Enter')gcs('techflow')">
+        <div class="pcimg"><svg width="72" height="56" viewBox="0 0 80 60" fill="none" aria-hidden="true"><rect x="8" y="10" width="64" height="40" rx="5" stroke="#065F57" stroke-width="1.5" fill="none"/><rect x="18" y="20" width="20" height="12" rx="3" fill="rgba(6,95,87,.12)" stroke="#065F57" stroke-width="1"/><rect x="44" y="20" width="20" height="4" rx="2" fill="rgba(6,95,87,.25)"/><rect x="44" y="28" width="14" height="4" rx="2" fill="rgba(6,95,87,.12)"/></svg><div class="pclbl">E-commerce</div></div>
+        <div class="pcbody"><div class="tag" style="margin-bottom:.625rem;">UX Research</div><h3 class="fd" style="font-size:1.1rem;font-weight:700;margin-bottom:.4rem;color:var(--tx-main);">TechFlow Redesign</h3><p style="font-size:.83rem;color:var(--tx-muted);line-height:1.6;">Rediseño del checkout móvil que redujo el abandono un 40%.</p><div class="pccta" aria-hidden="true">Ver caso <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span></div></div>
+      </article>
+      <article class="card" onclick="gcs('vitalia')" role="listitem" tabindex="0" aria-label="Ver caso Vitalia" onkeydown="if(event.key==='Enter')gcs('vitalia')">
+        <div class="pcimg"><svg width="50" height="64" viewBox="0 0 56 80" fill="none" aria-hidden="true"><rect x="8" y="6" width="40" height="64" rx="6" stroke="#065F57" stroke-width="1.5" fill="none"/><rect x="16" y="16" width="24" height="14" rx="3" fill="rgba(6,95,87,.1)" stroke="#065F57" stroke-width="1"/><circle cx="28" cy="52" r="9" stroke="#065F57" stroke-width="1.5" fill="none"/><path d="M24 52L27 55L33 48" stroke="#065F57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="pclbl">Health App</div></div>
+        <div class="pcbody"><div class="tag" style="margin-bottom:.625rem;">Product Design</div><h3 class="fd" style="font-size:1.1rem;font-weight:700;margin-bottom:.4rem;color:var(--tx-main);">Vitalia Health App</h3><p style="font-size:.83rem;color:var(--tx-muted);line-height:1.6;">Sistema de engagement para usuarios con condiciones crónicas.</p><div class="pccta" aria-hidden="true">Ver caso <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span></div></div>
+      </article>
+      <article class="card" onclick="gcs('fintrack')" role="listitem" tabindex="0" aria-label="Ver caso FinTrack Pro" onkeydown="if(event.key==='Enter')gcs('fintrack')">
+        <div class="pcimg"><svg width="72" height="60" viewBox="0 0 80 64" fill="none" aria-hidden="true"><rect x="8" y="32" width="16" height="22" rx="3" fill="rgba(6,95,87,.15)"/><rect x="30" y="20" width="16" height="34" rx="3" fill="rgba(6,95,87,.25)"/><rect x="52" y="10" width="16" height="44" rx="3" fill="rgba(6,95,87,.4)"/><line x1="8" y1="58" x2="70" y2="58" stroke="#065F57" stroke-width="1" stroke-dasharray="3 3"/></svg><div class="pclbl">SaaS Fintech</div></div>
+        <div class="pcbody"><div class="tag" style="margin-bottom:.625rem;">Information Architecture</div><h3 class="fd" style="font-size:1.1rem;font-weight:700;margin-bottom:.4rem;color:var(--tx-main);">FinTrack Pro</h3><p style="font-size:.83rem;color:var(--tx-muted);line-height:1.6;">Simplificación de onboarding en plataforma financiera B2B.</p><div class="pccta" aria-hidden="true">Ver caso <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <div class="con" style="padding-bottom:5rem;">
+    <div class="atease">
+      <div class="atecon">
+        <div class="tag" style="margin-bottom:.875rem;">Bellas Artes</div>
+        <h2 class="stitle" style="font-size:clamp(1.7rem,3.5vw,2.6rem);margin-bottom:1rem;">Arte que nutre<br/>el diseño</h2>
+        <p class="bt" style="margin-bottom:2rem;">Mi práctica artística no es un hobby: es el laboratorio donde experimento con color, forma y narrativa visual. Todo eso fluye directamente a mi trabajo de UX/UI.</p>
+        <button class="bg" onclick="gp('obra')">Ver obra completa <span class="material-symbols-outlined" style="font-size:16px;" aria-hidden="true">arrow_forward</span></button>
+      </div>
+      <div class="amg" aria-hidden="true">
+        <div class="am"><svg viewBox="0 0 80 80"><rect width="80" height="80" fill="#fdf5ee"/><ellipse cx="25" cy="38" rx="20" ry="25" fill="#c4562a" opacity=".5"/><ellipse cx="58" cy="50" rx="17" ry="22" fill="#e8821a" opacity=".38"/><ellipse cx="42" cy="25" rx="13" ry="17" fill="#f5b060" opacity=".32"/></svg></div>
+        <div class="am"><svg viewBox="0 0 80 80"><rect width="80" height="80" fill="#eef2f8"/><polygon points="40,8 74,68 6,68" stroke="#065F57" stroke-width="2" fill="rgba(6,95,87,.08)"/><circle cx="40" cy="42" r="16" stroke="#065F57" stroke-width="1.5" fill="none"/></svg></div>
+        <div class="am"><svg viewBox="0 0 80 80"><rect width="80" height="80" fill="#f5f3f0"/><path d="M15 62 Q28 15 42 44 Q55 72 68 25" stroke="#888" stroke-width="2.5" fill="none" opacity=".65"/><path d="M12 48 Q32 12 52 38 Q66 58 72 32" stroke="#bbb" stroke-width="1.5" fill="none" opacity=".42"/></svg></div>
+        <div class="am"><svg viewBox="0 0 80 80"><rect width="80" height="80" fill="#edf4f8"/><ellipse cx="40" cy="58" rx="34" ry="12" fill="#a8cde0" opacity=".7"/><ellipse cx="40" cy="44" rx="25" ry="17" fill="#6aaccc" opacity=".5"/><ellipse cx="40" cy="28" rx="16" ry="13" fill="#3090bb" opacity=".34"/></svg></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- PAGE: PROYECTOS -->
+<main id="page-proyectos" class="page" aria-label="Proyectos UX">
+  <div class="ph"><div class="tag" style="margin-bottom:.75rem;">Portfolio UX/UI</div><h1 class="stitle">Casos de estudio</h1><p class="bt" style="margin-top:.625rem;max-width:520px;">Cada proyecto documenta el proceso completo: de la investigación a los resultados medibles.</p></div>
+  <div class="pl" role="list">
+    <article class="prow" onclick="gcs('techflow')" role="listitem" tabindex="0" aria-label="Abrir caso TechFlow" onkeydown="if(event.key==='Enter')gcs('techflow')">
+      <div class="primg" aria-hidden="true"><svg width="64" height="50" viewBox="0 0 80 60" fill="none"><rect x="8" y="10" width="64" height="40" rx="5" stroke="#065F57" stroke-width="1.5" fill="none"/><rect x="18" y="20" width="20" height="12" rx="3" fill="rgba(6,95,87,.12)" stroke="#065F57" stroke-width="1"/><rect x="44" y="20" width="20" height="4" rx="2" fill="rgba(6,95,87,.25)"/><rect x="44" y="28" width="14" height="4" rx="2" fill="rgba(6,95,87,.12)"/></svg></div>
+      <div class="prbody"><div class="tag" style="margin-bottom:.625rem;">E-commerce · Rediseño</div><h2 class="fd" style="font-size:1.3rem;font-weight:700;color:var(--tx-main);margin-bottom:.4rem;">Rediseño E-commerce: TechFlow</h2><p class="bt" style="font-size:.88rem;margin-bottom:.75rem;">Baja conversión en el flujo de checkout móvil. Investigación, tests de usabilidad y rediseño completo.</p><div class="pmeta"><span><span class="material-symbols-outlined" aria-hidden="true">person</span>Lead UX Designer</span><span><span class="material-symbols-outlined" aria-hidden="true">schedule</span>3 meses</span><span><span class="material-symbols-outlined" aria-hidden="true">build</span>Figma · Maze · Hotjar</span></div><div class="prcta" aria-hidden="true">Ver caso completo <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span></div></div>
+    </article>
+    <article class="prow" onclick="gcs('vitalia')" role="listitem" tabindex="0" aria-label="Abrir caso Vitalia" onkeydown="if(event.key==='Enter')gcs('vitalia')">
+      <div class="primg" aria-hidden="true"><svg width="50" height="64" viewBox="0 0 56 80" fill="none"><rect x="8" y="6" width="40" height="64" rx="6" stroke="#065F57" stroke-width="1.5" fill="none"/><rect x="16" y="16" width="24" height="14" rx="3" fill="rgba(6,95,87,.1)" stroke="#065F57" stroke-width="1"/><circle cx="28" cy="52" r="9" stroke="#065F57" stroke-width="1.5" fill="none"/><path d="M24 52L27 55L33 48" stroke="#065F57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="prbody"><div class="tag" style="margin-bottom:.625rem;">Salud · App móvil</div><h2 class="fd" style="font-size:1.3rem;font-weight:700;color:var(--tx-main);margin-bottom:.4rem;">App de Salud: Vitalia</h2><p class="bt" style="font-size:.88rem;margin-bottom:.75rem;">Falta de retención de usuarios diarios. Sistema de engagement basado en motivación intrínseca.</p><div class="pmeta"><span><span class="material-symbols-outlined" aria-hidden="true">person</span>UX Researcher</span><span><span class="material-symbols-outlined" aria-hidden="true">schedule</span>4 meses</span><span><span class="material-symbols-outlined" aria-hidden="true">build</span>Figma · Miro · Lookback</span></div><div class="prcta" aria-hidden="true">Ver caso completo <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span></div></div>
+    </article>
+    <article class="prow" onclick="gcs('fintrack')" role="listitem" tabindex="0" aria-label="Abrir caso FinTrack" onkeydown="if(event.key==='Enter')gcs('fintrack')">
+      <div class="primg" aria-hidden="true"><svg width="64" height="54" viewBox="0 0 80 64" fill="none"><rect x="8" y="32" width="16" height="22" rx="3" fill="rgba(6,95,87,.15)"/><rect x="30" y="20" width="16" height="34" rx="3" fill="rgba(6,95,87,.25)"/><rect x="52" y="10" width="16" height="44" rx="3" fill="rgba(6,95,87,.4)"/><line x1="8" y1="58" x2="70" y2="58" stroke="#065F57" stroke-width="1" stroke-dasharray="3 3"/></svg></div>
+      <div class="prbody"><div class="tag" style="margin-bottom:.625rem;">SaaS · Fintech</div><h2 class="fd" style="font-size:1.3rem;font-weight:700;color:var(--tx-main);margin-bottom:.4rem;">SaaS Financiero: FinTrack Pro</h2><p class="bt" style="font-size:.88rem;margin-bottom:.75rem;">Curva de aprendizaje empinada para usuarios corporativos. Rediseño de onboarding e IA.</p><div class="pmeta"><span><span class="material-symbols-outlined" aria-hidden="true">person</span>Product Designer</span><span><span class="material-symbols-outlined" aria-hidden="true">schedule</span>6 meses</span><span><span class="material-symbols-outlined" aria-hidden="true">build</span>Figma · Notion · FullStory</span></div><div class="prcta" aria-hidden="true">Ver caso completo <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span></div></div>
+    </article>
+  </div>
+</main>
+
+<!-- PAGE: CASO ESTUDIO -->
+<main id="page-caso" class="page" aria-label="Caso de estudio">
+  <div class="csh">
+    <button class="bback" onclick="gp('proyectos')" aria-label="Volver a proyectos"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>Volver a proyectos</button>
+    <div class="tag" id="cc" style="margin-bottom:.75rem;"></div>
+    <h1 class="stitle" id="ct"></h1>
+    <div class="csmg" role="list">
+      <div class="csmi" role="listitem"><div class="csmk">Proyecto</div><div class="csmv" id="cm-p"></div></div>
+      <div class="csmi" role="listitem"><div class="csmk">Año</div><div class="csmv" id="cm-y"></div></div>
+      <div class="csmi" role="listitem"><div class="csmk">Rol</div><div class="csmv" id="cm-r"></div></div>
+      <div class="csmi" role="listitem"><div class="csmk">Herramientas</div><div class="csmv" id="cm-t"></div></div>
+    </div>
+  </div>
+  <div class="csb">
+    <div class="cssec"><h2 class="csstitle"><span class="material-symbols-outlined" aria-hidden="true">info</span>Contexto</h2><p class="bt" id="c-ctx"></p></div>
+    <div class="div"></div>
+    <div class="cssec"><h2 class="csstitle"><span class="material-symbols-outlined" aria-hidden="true">report_problem</span>Problema</h2><blockquote class="csq" id="c-pq"></blockquote><p class="bt" id="c-p"></p></div>
+    <div class="div"></div>
+    <div class="cssec"><h2 class="csstitle"><span class="material-symbols-outlined" aria-hidden="true">search</span>Investigación</h2><div class="rcs"><div class="rc"><div class="rct" id="c-r1t"></div><p class="rcx" id="c-r1x"></p></div><div class="rc"><div class="rct" id="c-r2t"></div><p class="rcx" id="c-r2x"></p></div></div><p class="bt" id="c-res"></p></div>
+    <div class="div"></div>
+    <div class="cssec"><h2 class="csstitle"><span class="material-symbols-outlined" aria-hidden="true">psychology</span>Definición</h2><p class="bt" id="c-def"></p></div>
+    <div class="div"></div>
+    <div class="cssec"><h2 class="csstitle"><span class="material-symbols-outlined" aria-hidden="true">draw</span>Ideación</h2><p class="bt" id="c-ide" style="margin-bottom:1.25rem;"></p><div class="wfg" aria-hidden="true"><div class="wfb">Wireframe v1</div><div class="wfb">Iteración v2</div></div></div>
+    <div class="div"></div>
+    <div class="cssec"><h2 class="csstitle"><span class="material-symbols-outlined" aria-hidden="true">app_shortcut</span>Prototipo final</h2><div class="ptob" aria-label="Espacio para mockups"><div class="ptobi"><span class="material-symbols-outlined" aria-hidden="true">devices</span><div class="ptobiL">Mockups · Prototipo Figma</div></div></div><p class="bt" id="c-pro"></p></div>
+    <div class="div"></div>
+    <div class="cssec"><h2 class="csstitle"><span class="material-symbols-outlined" aria-hidden="true">analytics</span>Resultados</h2><div class="resgrid" id="c-rg" role="list"></div><p class="bt" id="c-con" style="margin-top:1.5rem;"></p></div>
+  </div>
+</main>
+
+<!-- PAGE: SOBRE MÍ -->
+<main id="page-sobre-mi" class="page" aria-label="Sobre Mí">
+  <div class="abh">
+    <div class="abav" role="img" aria-label="Foto de perfil">🎨</div>
+    <div>
+      <div class="tag" style="margin-bottom:.625rem;">Diseñadora UX/UI</div>
+      <h1 class="abname">Tu nombre aquí</h1>
+      <p class="abrole">UX/UI Designer · Formación en Bellas Artes</p>
+      <p class="bt" style="font-size:.875rem;max-width:440px;">Basada en [ciudad]. Disponible para proyectos freelance y colaboraciones.</p>
+      <div class="abbtns">
+        <button class="bp"><span class="material-symbols-outlined" style="font-size:17px;" aria-hidden="true">download</span>Descargar CV</button>
+        <button class="bg" onclick="gp('contacto')"><span class="material-symbols-outlined" style="font-size:17px;" aria-hidden="true">mail</span>Contactar</button>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:860px;margin:0 auto;padding:0 2rem;"><div class="div" style="margin:1.25rem 0;"></div></div>
+  <div class="abody">
+    <div>
+      <div class="abseclbl">Perfil profesional</div>
+      <p class="bt" style="margin-bottom:1.375rem;">Soy diseñadora UX con formación en Bellas Artes, apasionada por crear experiencias digitales significativas y estéticas. Mi enfoque combina la sensibilidad artística con metodologías rigurosas de diseño centrado en el usuario.</p>
+      <p class="bt">Mi formación en Bellas Artes me permite abordar problemas de UX con una sensibilidad única hacia el color, la composición y la narrativa visual.</p>
+      <div class="div"></div>
+      <div class="abseclbl">Foco estratégico</div>
+      <div role="list">
+        <div class="fi" role="listitem"><div class="fico" aria-hidden="true"><span class="material-symbols-outlined">group</span></div>Diseño centrado en el usuario</div>
+        <div class="fi" role="listitem"><div class="fico" aria-hidden="true"><span class="material-symbols-outlined">accessibility_new</span></div>Accesibilidad e inclusión</div>
+        <div class="fi" role="listitem"><div class="fico" aria-hidden="true"><span class="material-symbols-outlined">visibility</span></div>Pensamiento visual</div>
+        <div class="fi" role="listitem"><div class="fico" aria-hidden="true"><span class="material-symbols-outlined">science</span></div>Research basado en evidencia</div>
+      </div>
+    </div>
+    <div>
+      <div class="abseclbl">Skills y especialidades</div>
+      <div class="sgl">UX</div>
+      <span class="stag">UX Research</span><span class="stag">Arquitectura de info</span><span class="stag">User Testing</span><span class="stag">Wireframing</span><span class="stag">Prototipado</span><span class="stag">Design Thinking</span><span class="stag">Entrevistas</span><span class="stag">Journey Maps</span>
+      <div class="sgl">UI &amp; Visual</div>
+      <span class="stag">Design Systems</span><span class="stag">Tipografía</span><span class="stag">Color &amp; Accesibilidad</span><span class="stag">Motion Design</span><span class="stag">Composición</span>
+      <div class="sgl">Herramientas</div>
+      <span class="stag">Figma</span><span class="stag">Miro</span><span class="stag">Maze</span><span class="stag">Hotjar</span><span class="stag">Notion</span><span class="stag">Adobe CC</span>
+      <div class="sgl">Arte</div>
+      <span class="stag">Óleo</span><span class="stag">Acuarela</span><span class="stag">Carboncillo</span><span class="stag">Arte Digital</span><span class="stag">Escultura</span><span class="stag">Composición 3D</span>
+    </div>
+  </div>
+</main>
+
+<!-- PAGE: OBRA ARTÍSTICA -->
+<main id="page-obra" class="page" aria-label="Obra Artística">
+  <div class="arth">
+    <div id="art-main">
+      <div class="tag" style="margin-bottom:.75rem;">Bellas Artes</div>
+      <h1 class="stitle">Obra artística</h1>
+      <div class="artbio" style="margin-top:1.625rem;">
+        <div class="artbiobar" aria-hidden="true"></div>
+        <div><p class="bt" style="margin-bottom:.875rem;">Mi trayectoria en Bellas Artes comenzó con [aquí tu historia formativa]. A través de la pintura, el dibujo y el arte digital exploro [tu temática: la identidad, el territorio, la memoria...].</p><p class="bt">Mi obra es un laboratorio constante de experimentación visual que nutre directamente mi trabajo como diseñadora UX/UI: cada lienzo es un ejercicio de composición, jerarquía y narrativa visual.</p></div>
+      </div>
+    </div>
+    <div id="art-det" style="display:none;">
+      <button class="bback" onclick="artMain()" aria-label="Volver a la galería"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>Volver a galería</button>
+      <div class="tag" id="ad-tag" style="margin-bottom:.75rem;"></div>
+      <div class="artdg">
+        <div><div class="artdm" id="ad-img" role="img"></div><div class="artdts" id="ad-ths" aria-hidden="true"></div></div>
+        <div><h2 class="stitle" id="ad-title" style="font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:.5rem;"></h2><div style="color:var(--tx-muted);font-size:.875rem;margin-bottom:1.5rem;display:flex;gap:1.5rem;"><span id="ad-year"></span><span id="ad-tech"></span></div><p class="bt" id="ad-desc"></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="artgal" id="artgal" role="list" aria-label="Galería de obras"></div>
+</main>
+
+<!-- PAGE: CONTACTO -->
+<main id="page-contacto" class="page" aria-label="Contacto">
+  <div class="conw">
+    <div class="tag" style="margin-bottom:.75rem;">Disponible</div>
+    <h1 class="stitle" style="margin-bottom:.5rem;">¡Hablemos!</h1>
+    <p class="bt" style="margin-bottom:2.5rem;">¿Tienes un proyecto en mente? Me encantaría escucharlo.</p>
+    <form class="fcard" onsubmit="doSubmit(event)" novalidate aria-label="Formulario de contacto">
+      <div class="fg2">
+        <div class="fgrp"><label class="flbl" for="fn">Nombre</label><input type="text" id="fn" class="finp" placeholder="Tu nombre" autocomplete="name" required/></div>
+        <div class="fgrp"><label class="flbl" for="fe">Email</label><input type="email" id="fe" class="finp" placeholder="tu@email.com" autocomplete="email" required/></div>
+      </div>
+      <div class="fgrp"><label class="flbl" for="fs">Asunto</label><input type="text" id="fs" class="finp" placeholder="Proyecto, colaboración, consulta..."/></div>
+      <div class="fgrp"><label class="flbl" for="fm">Mensaje</label><textarea id="fm" class="finp" placeholder="Cuéntame sobre tu idea..." required></textarea></div>
+      <button type="submit" class="bp" style="width:100%;justify-content:center;">Enviar mensaje <span class="material-symbols-outlined" style="font-size:17px;" aria-hidden="true">send</span></button>
+    </form>
+    <div style="margin-top:2.25rem;text-align:center;">
+      <p style="color:var(--tx-subtle);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.625rem;">O escríbeme directamente</p>
+      <a href="mailto:hola@tuportfolio.com" style="color:var(--cta);font-size:1.05rem;font-weight:700;font-family:'Syne',sans-serif;text-decoration:none;">hola@tuportfolio.com</a>
+    </div>
+    <nav class="socg" aria-label="Redes sociales">
+      <a class="socc" href="#" onclick="return false;" aria-label="LinkedIn">
+        <div class="soci" aria-hidden="true"><span class="material-symbols-outlined">link</span></div>
+        <div class="socn">LinkedIn</div><div class="soch">Tu perfil profesional</div>
+      </a>
+      <a class="socc" href="#" onclick="return false;" aria-label="Behance">
+        <div class="soci" aria-hidden="true"><span class="material-symbols-outlined">palette</span></div>
+        <div class="socn">Behance</div><div class="soch">Portfolio visual</div>
+      </a>
+      <a class="socc" href="#" onclick="return false;" aria-label="Instagram">
+        <div class="soci" aria-hidden="true"><span class="material-symbols-outlined">photo_camera</span></div>
+        <div class="socn">Instagram</div><div class="soch">Proceso creativo</div>
+      </a>
+    </nav>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite">✓ Mensaje enviado correctamente</div>
+
+<script>
+const CS={
+  techflow:{cat:'E-commerce · Rediseño',title:'TechFlow Redesign',meta:{p:'App móvil',y:'2024',r:'Lead UX Designer',t:'Figma · Maze · Hotjar'},ctx:'TechFlow es una plataforma de e-commerce especializada en tecnología con más de 200.000 usuarios activos. A pesar del volumen de tráfico, las métricas de conversión en mobile eran inferiores al benchmark del sector.',pq:'"El usuario llega al carrito con intención de compra, pero abandona antes de completar el pago. Algo en el proceso genera fricción o desconfianza."',prob:'La tasa de abandono en el checkout móvil era del 68%, muy superior al 45% del sector. Los heatmaps mostraban confusión en el paso de selección de dirección y en el resumen de costes finales.',r1t:'14 entrevistas',r1x:'Entrevistas con usuarios que habían abandonado recientemente el checkout para identificar los puntos de fricción exactos.',r2t:'Análisis de datos',r2x:'Mapas de calor, grabaciones de sesión y análisis del funnel de conversión para cuantificar el problema.',res:'El 72% mencionó incertidumbre sobre los costes de envío como razón principal de abandono. El precio final aparecía solo en el último paso, generando sorpresa negativa.',def:'Definimos el problema como un fallo en la transparencia de precios y en la comunicación del progreso. Nuestro usuario objetivo necesita conocer el coste total antes de comprometerse.',ide:'Iteramos sobre tres conceptos: mostrar el precio total desde el carrito, añadir un stepper de progreso visible y simplificar el formulario de dirección mediante autocompletado inteligente.',pro:'El prototipo final integró un resumen de precio persistente, reducción de campos del formulario de 8 a 4, y una pantalla de confirmación antes del pago.',res2:[{n:'-40%',l:'Abandono checkout'},{n:'+28%',l:'Conversión móvil'},{n:'4.7★',l:'Satisfacción usuario'}],con:'La transparencia de costes desde las primeras etapas fue el cambio de mayor impacto. Este proyecto confirmó que la confianza se construye con información, no con urgencia artificial.'},
+  vitalia:{cat:'Salud · App móvil',title:'Vitalia Health App',meta:{p:'App de salud',y:'2023',r:'UX Researcher',t:'Figma · Miro · Lookback'},ctx:'Vitalia es una aplicación para personas con enfermedades crónicas que necesitan registrar síntomas diariamente. El principal desafío era mantener la adherencia al registro más allá de la primera semana.',pq:'"Los usuarios instalan la app con mucha motivación, pero al cabo de 5-7 días el 80% deja de registrar síntomas. El hábito no se consolida."',prob:'La retención a 30 días era del 18%, frente al 40% de apps similares. El registro diario se percibía como una tarea más, sin valor inmediato para el usuario.',r1t:'20 diarios de usuario',r1x:'Usuarios documentaron su experiencia durante 2 semanas para entender el contexto real y los momentos de abandono.',r2t:'Análisis motivacional',r2x:'Aplicamos el modelo FOGG de comportamiento para mapear motivación, habilidad y disparadores en el proceso de registro.',res:'Descubrimos que el valor del registro era demasiado abstracto y distante. Los usuarios necesitaban feedback inmediato que hiciera visible el progreso de su propia salud.',def:'Redefinimos la propuesta de valor: el registro no es "para el médico", es "para mí". Creamos a "Marcos, 52 años", que quiere entender sus propios patrones de salud.',ide:'Exploramos gamificación responsable, visualización personal de datos de salud y recordatorios contextuales basados en la rutina del usuario.',pro:'El diseño final incluye un dashboard personal de tendencias, celebraciones de rachas de registro, y recordatorios adaptados al horario del usuario.',res2:[{n:'+62%',l:'Retención 30 días'},{n:'+45%',l:'Registro diario'},{n:'4.9★',l:'App Store rating'}],con:'Hacer visible el valor inmediato fue más efectivo que cualquier mecánica de gamificación. Los datos propios son intrínsecamente motivadores cuando se presentan bien.'},
+  fintrack:{cat:'SaaS · Fintech B2B',title:'FinTrack Pro',meta:{p:'Dashboard SaaS',y:'2023',r:'Product Designer',t:'Figma · Notion · FullStory'},ctx:'FinTrack Pro es una plataforma de gestión financiera para empresas medianas. Con más de 200 funcionalidades, la curva de aprendizaje era el mayor obstáculo para la activación de nuevos clientes.',pq:'"Los equipos financieros llegan a FinTrack con alta expectativa pero abandonan en la primera semana porque no saben por dónde empezar."',prob:'El time-to-value era de 3 semanas frente a los 3 días de la industria top. El 65% se quedaba atascado en la configuración inicial de cuentas bancarias.',r1t:'Shadowing con 8 equipos',r1x:'Observación directa en primeras sesiones para identificar dónde perdían el hilo.',r2t:'Análisis de abandono',r2x:'FullStory mostró que el 65% de usuarios se quedaba atascado en la configuración de cuentas bancarias.',res:'La arquitectura de información no respetaba el modelo mental del usuario financiero. Las funciones estaban organizadas por lógica del sistema, no por flujos de trabajo reales.',def:'Reorganizamos la arquitectura alrededor de 5 "trabajos" clave que hace un equipo financiero, no alrededor de módulos del software.',ide:'Diseñamos un onboarding progresivo basado en el trabajo que el usuario quería hacer primero, con checklist de activación y tours contextuales.',pro:'El flujo rediseñado incluye selección de perfil de empresa, configuración guiada del primer flujo de trabajo y un centro de ayuda contextual siempre visible.',res2:[{n:'-78%',l:'Time-to-value'},{n:'+35%',l:'Activación 7 días'},{n:'92%',l:'NPS onboarding'}],con:'Organizar desde la perspectiva del trabajo del usuario —no de la arquitectura técnica— fue la decisión de diseño con mayor impacto medible.'}
+};
+const ART=[
+  {id:'oils',tag:'Óleo sobre lienzo',title:'Serie Raíces',year:'2023',tech:'Óleo · 60×80 cm',emoji:'🌊',bg:'#fdf5ee',desc:'Una exploración de la identidad territorial a través del color expresionista. Las texturas densas del óleo permiten construir capas de significado que dialogan entre sí, evocando paisajes de la memoria más que lugares físicos concretos.'},
+  {id:'digital',tag:'Arte Digital',title:'Cyber Portrait',year:'2023',tech:'Digital · Ilustración',emoji:'💠',bg:'#eef3f8',desc:'Serie que explora la identidad en la era digital, combinando estética ciber con retrato clásico. El contraste entre lo analógico y lo digital es el eje conceptual.'},
+  {id:'charcoal',tag:'Carboncillo',title:'Estudio Urbano',year:'2022',tech:'Carboncillo · 50×70 cm',emoji:'🏛️',bg:'#f5f3f0',desc:'Serie de estudios arquitectónicos que capturan la tensión entre lo construido y lo orgánico. La linealidad del carboncillo enfatiza las geometrías del espacio urbano.'},
+  {id:'watercolor',tag:'Acuarela',title:'Horizontes',year:'2023',tech:'Acuarela · 40×60 cm',emoji:'🌅',bg:'#edf4f8',desc:'Paisajes abstractos donde el agua y el pigmento trabajan en conjunto. La imprevisibilidad genera composiciones únicas que dialogan con la idea de lo efímero.'},
+  {id:'acrylic',tag:'Acrílico',title:'Explosión Cromática',year:'2022',tech:'Acrílico · 80×100 cm',emoji:'🎨',bg:'#fdf0ea',desc:'Exploración de la energía y el movimiento a través del color. Las mezclas directas sobre lienzo crean efectos que celebran el azar como herramienta creativa.'},
+  {id:'3d',tag:'Composición 3D',title:'Pureza Geométrica',year:'2024',tech:'3D · Render digital',emoji:'🔷',bg:'#f0f0f8',desc:'Composiciones tridimensionales que exploran la perfección geométrica y las relaciones espaciales. Influenciada por el minimalismo y la arquitectura paramétrica.'}
+];
+
+function gp(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nlinks a').forEach(a=>a.classList.remove('on'));
+  const nd=document.getElementById('n-'+id); if(nd) nd.classList.add('on');
+  document.querySelectorAll('.nmi').forEach(i=>i.classList.remove('on'));
+  const nm=document.getElementById('m-'+id); if(nm) nm.classList.add('on');
+  closePanel();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function gcs(id){
+  const cs=CS[id]; if(!cs) return;
+  document.getElementById('cc').textContent=cs.cat;
+  document.getElementById('ct').textContent=cs.title;
+  document.getElementById('cm-p').textContent=cs.meta.p;
+  document.getElementById('cm-y').textContent=cs.meta.y;
+  document.getElementById('cm-r').textContent=cs.meta.r;
+  document.getElementById('cm-t').textContent=cs.meta.t;
+  document.getElementById('c-ctx').textContent=cs.ctx;
+  document.getElementById('c-pq').textContent=cs.pq;
+  document.getElementById('c-p').textContent=cs.prob;
+  document.getElementById('c-r1t').textContent=cs.r1t;
+  document.getElementById('c-r1x').textContent=cs.r1x;
+  document.getElementById('c-r2t').textContent=cs.r2t;
+  document.getElementById('c-r2x').textContent=cs.r2x;
+  document.getElementById('c-res').textContent=cs.res;
+  document.getElementById('c-def').textContent=cs.def;
+  document.getElementById('c-ide').textContent=cs.ide;
+  document.getElementById('c-pro').textContent=cs.pro;
+  document.getElementById('c-con').textContent=cs.con;
+  document.getElementById('c-rg').innerHTML=cs.res2.map(r=>`<div class="rescard" role="listitem"><div class="resnum">${r.n}</div><div class="reslbl">${r.l}</div></div>`).join('');
+  gp('caso');
+}
+
+function buildGal(){
+  document.getElementById('artgal').innerHTML=ART.map(a=>
+    `<article class="artc" onclick="artDet('${a.id}')" tabindex="0" role="listitem" aria-label="Ver obra: ${a.title}" onkeydown="if(event.key==='Enter')artDet('${a.id}')">
+      <div class="artcimg" style="background:${a.bg};" role="img" aria-label="${a.title}"><span aria-hidden="true" style="font-size:3.5rem;">${a.emoji}</span></div>
+      <div class="artcbody"><div class="artctech">${a.tag}</div><div class="artctitle">${a.title}</div><div class="artcyear">${a.year} · ${a.tech}</div></div>
+    </article>`
+  ).join('');
+}
+
+function artDet(id){
+  const a=ART.find(x=>x.id===id); if(!a) return;
+  document.getElementById('art-main').style.display='none';
+  document.getElementById('art-det').style.display='block';
+  document.getElementById('artgal').style.display='none';
+  document.getElementById('ad-tag').textContent=a.tag;
+  document.getElementById('ad-title').textContent=a.title;
+  document.getElementById('ad-year').textContent=a.year;
+  document.getElementById('ad-tech').textContent=a.tech;
+  document.getElementById('ad-desc').textContent=a.desc;
+  const img=document.getElementById('ad-img');
+  img.style.background=a.bg; img.setAttribute('aria-label',a.title);
+  img.innerHTML=`<span aria-hidden="true" style="font-size:5rem;">${a.emoji}</span>`;
+  document.getElementById('ad-ths').innerHTML=[1,2,3].map(()=>
+    `<div class="artdt" style="background:${a.bg};"><span style="font-size:1.5rem;">${a.emoji}</span></div>`
+  ).join('');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function artMain(){
+  document.getElementById('art-main').style.display='block';
+  document.getElementById('art-det').style.display='none';
+  document.getElementById('artgal').style.display='grid';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function doSubmit(e){
+  e.preventDefault();
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3500);
+}
+
+let panelOpen=false;
+function togPanel(){
+  panelOpen=!panelOpen;
+  document.getElementById('a11y').classList.toggle('open',panelOpen);
+  const b=document.getElementById('stog'); if(b) b.setAttribute('aria-expanded',panelOpen);
+}
+function closePanel(){panelOpen=false;document.getElementById('a11y').classList.remove('open');}
+
+function togDark(on){document.documentElement.classList.toggle('dark',on);}
+
+let fsStep=1;
+const fsSteps=[90,100,110,120,130];
+function chgFont(d){
+  fsStep=Math.max(0,Math.min(fsSteps.length-1,fsStep+d));
+  const pct=fsSteps[fsStep];
+  document.documentElement.style.fontSize=pct+'%';
+  document.getElementById('fsval').textContent=pct+'%';
+  document.getElementById('fslbl').textContent=pct===100?'Base (100%)':(pct<100?`Reducido (${pct}%)`:`Aumentado (${pct}%)`);
+}
+
+function setLang(l){
+  document.getElementById('l-es').classList.toggle('on',l==='es');
+  document.getElementById('l-en').classList.toggle('on',l==='en');
+  document.getElementById('l-es').setAttribute('aria-pressed',l==='es');
+  document.getElementById('l-en').setAttribute('aria-pressed',l==='en');
+  document.documentElement.lang=l;
+}
+
+document.addEventListener('click',e=>{
+  if(panelOpen&&!document.getElementById('a11y').contains(e.target)&&!e.target.closest('[onclick*="togPanel"]'))closePanel();
+});
+
+buildGal();
+</script>
+</body>
+</html>
