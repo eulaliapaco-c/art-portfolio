@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Accesibilidad — Paco-C</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@400;500;600&amp;family=Public+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="shortcut icon" href="favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="paco-c.com" />
+<link rel="manifest" href="favicon/site.webmanifest" />
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fff7f9",
+                    "secondary-fixed": "#d8e7d1",
+                    "surface-container-high": "#f0e6e9",
+                    "on-primary": "#ffffff",
+                    "background": "#fff7f9",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#b4d08d",
+                    "text-secondary": "#5A5450",
+                    "on-secondary-container": "#586655",
+                    "surface-dim": "#e1d7db",
+                    "surface-bright": "#fff7f9",
+                    "surface-container-low": "#fbf1f5",
+                    "error": "#ba1a1a",
+                    "surface-card": "#E7E3E0",
+                    "primary-fixed": "#ffd7f0",
+                    "inverse-primary": "#f2b4df",
+                    "primary-container": "#c78db6",
+                    "inverse-surface": "#342f32",
+                    "secondary-container": "#d5e4ce",
+                    "outline-variant": "#d2c2ca",
+                    "secondary": "#546250",
+                    "dark-text-secondary": "#BDBDBD",
+                    "primary": "#804e73",
+                    "on-tertiary-container": "#273c09",
+                    "on-tertiary-fixed-variant": "#374d19",
+                    "inverse-on-surface": "#f9eef2",
+                    "outline": "#81737b",
+                    "on-primary-fixed": "#330a2d",
+                    "on-primary-container": "#532649",
+                    "dark-text-primary": "#E0E0E0",
+                    "tertiary-fixed": "#cfeca7",
+                    "surface-tint": "#804e73",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1f1a1d",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#121f11",
+                    "secondary-fixed-dim": "#bccbb5",
+                    "on-secondary-fixed-variant": "#3d4a3a",
+                    "dark-surface-card": "#1E1E1E",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#eae0e3",
+                    "dark-bg-base": "#121212",
+                    "cta-hover": "#A86E97",
+                    "surface-container-highest": "#eae0e3",
+                    "on-tertiary-fixed": "#102000",
+                    "on-surface": "#1f1a1d",
+                    "on-primary-fixed-variant": "#66375a",
+                    "bg-base": "#F4F1EE",
+                    "text-primary": "#2D2926",
+                    "primary-fixed-dim": "#f2b4df",
+                    "on-error": "#ffffff",
+                    "tertiary": "#4e662e",
+                    "tertiary-container": "#8da869",
+                    "on-surface-variant": "#4f444a",
+                    "surface-container": "#f6ebef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "8px",
+                    "lg": "8px",
+                    "xl": "12px",
+                    "card": "8px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "1.5rem",
+                    "section-gap": "8rem",
+                    "stack-lg": "3rem",
+                    "container-padding": "2rem",
+                    "stack-sm": "0.5rem",
+                    "card-padding": "2.5rem"
+            },
+            "fontFamily": {
+                    "h2": ["Atkinson Hyperlegible"],
+                    "h1": ["Atkinson Hyperlegible"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Atkinson Hyperlegible"],
+                    "sans": ["Public Sans", "sans-serif"]
+            },
+            "fontSize": {
+                    "h2": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "h1": ["64px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h3": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #F4F1EE; color: #2D2926; margin: 0; }
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined', sans-serif;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .canvas-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+        .museum-shadow {
+            box-shadow: 0 4px 24px -4px rgba(45, 41, 38, 0.08);
+        }
+        body.high-contrast * { color: #000 !important; border-color: #000 !important; }
+        body.high-contrast { background-color: #fff !important; }
+        body.high-contrast img, body.high-contrast .material-symbols-outlined { filter: contrast(1.5); }
+        body.reduce-motion *, body.reduce-motion *::before, body.reduce-motion *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary-container selection:text-white">
+<header class="bg-stone-50/90 backdrop-blur-md dark:bg-stone-950/90 fixed top-0 w-full z-50 border-b border-stone-200 dark:border-stone-800">
+<nav class="flex justify-between items-center px-8 md:px-12 py-6 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-4">
+<a href="home.html" class="text-lg font-bold tracking-[0.2em] text-stone-900 dark:text-stone-50 hover:text-primary focus:text-primary focus:outline-none transition-colors">
+    PACO-C
+</a>
+<button class="lg:hidden p-2 text-stone-900 dark:text-stone-50 focus:outline-none focus:ring-2 focus:ring-primary" id="menu_btn" onclick="document.getElementById('mobile_menu').classList.remove('hidden')" aria-label="Abrir menú">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-10 font-['Public_Sans'] font-light tracking-wide">
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="home.html">Inicio</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="proyectos ux.html">Proyectos UX</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="sobre mi.html">Sobre mí</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="proyectos artisticos.html">Obras</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="contacto.html">Contacto</a>
+<a class="text-fuchsia-600 dark:text-fuchsia-400 font-medium border-b border-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="accesibilidad.html">Accesibilidad</a>
+</div>
+</nav>
+</header>
+<div class="hidden fixed inset-0 z-[60]" id="mobile_menu">
+<div class="absolute inset-0 bg-black/50" onclick="this.parentElement.classList.add('hidden')"></div>
+<div class="relative ml-auto w-72 h-full bg-stone-50 shadow-2xl flex flex-col">
+<div class="flex items-center justify-between px-6 py-5 border-b border-stone-200">
+<span class="text-lg font-bold tracking-[0.2em] text-stone-900">PACO-C</span>
+<button class="p-2 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary" onclick="this.closest('#mobile_menu').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col px-6 pt-6 gap-6 font-['Public_Sans'] font-light tracking-wide text-lg">
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="home.html">Inicio</a>
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="proyectos ux.html">Proyectos UX</a>
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="sobre mi.html">Sobre mí</a>
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="proyectos artisticos.html">Obras</a>
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="contacto.html">Contacto</a>
+<a class="text-fuchsia-600 font-medium border-l-4 border-fuchsia-600 pl-4" href="accesibilidad.html">Accesibilidad</a>
+<div class="border-t border-stone-200 my-4"></div>
+<a class="text-stone-500 hover:text-fuchsia-600 transition-colors text-sm" href="politica de privacidad.html">Política de privacidad</a>
+<a class="text-stone-500 hover:text-fuchsia-600 transition-colors text-sm" href="aviso legal.html">Aviso legal</a>
+</nav>
+</div>
+</div>
+<main class="pt-24 pb-24 px-8 md:px-12 max-w-[1440px] mx-auto flex-grow w-full" id="mainContent">
+<div class="mb-16">
+<span class="font-label-md text-primary tracking-[0.2em] uppercase mb-6 block">Ajustes</span>
+<h1 class="font-h1 text-h1 tracking-tighter text-text-primary mb-4">Accesibilidad<span class="text-primary-container" aria-hidden="true">.</span></h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl">
+            Personaliza tu experiencia. Esta plataforma está diseñada en la intersección de la precisión y el arte, garantizando legibilidad y comodidad para cada mirada.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full mx-auto">
+<section class="lg:col-span-8 order-1 bg-surface-container-lowest border border-surface-card rounded-xl p-card-padding shadow-sm">
+<div class="flex items-center gap-3 mb-8 text-primary">
+<span class="material-symbols-outlined">visibility</span>
+<h2 class="font-h2 text-h2">Apariencia Visual</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+<div class="space-y-4">
+<p class="font-label-md text-label-md uppercase tracking-widest text-text-secondary">Contraste y claridad</p>
+<div class="flex flex-col gap-3">
+<label class="flex items-center justify-between w-full p-4 rounded-lg border border-surface-card bg-surface-container-lowest cursor-pointer hover:bg-stone-50 hover:border-outline transition-colors focus-within:outline-none focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 transition-all">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium">Alto contraste</span>
+<span class="text-xs text-text-secondary">Aumenta la visibilidad de los elementos de la interfaz</span>
+</div>
+<input class="w-6 h-6 rounded border-surface-card text-primary focus:ring-primary" id="checkboxContrast" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between w-full p-4 rounded-lg border border-surface-card bg-surface-container-lowest cursor-pointer hover:bg-stone-50 hover:border-outline transition-colors focus-within:outline-none focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 transition-all">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium">Reducir movimiento</span>
+<span class="text-xs text-text-secondary">Desactiva animaciones no esenciales</span>
+</div>
+<input class="w-6 h-6 rounded border-surface-card text-primary focus:ring-primary" id="checkboxMotion" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</section>
+<section class="lg:col-span-4 order-2 bg-surface-container-lowest border border-surface-card rounded-xl p-card-padding shadow-sm flex flex-col">
+<div class="flex items-center gap-3 mb-8 text-primary">
+<span class="material-symbols-outlined">language</span>
+<h2 class="font-h2 text-h2">Idioma</h2>
+</div>
+<div class="flex flex-col gap-4 flex-grow">
+<button type="button" onclick="setLanguage('es')" class="flex items-center justify-between w-full p-5 rounded-lg bg-surface-container-high border border-primary text-text-primary focus:outline-none focus:ring-2 focus:ring-primary">
+<div class="flex items-center gap-4">
+<span class="font-black text-xs px-2 py-1 bg-primary text-on-primary rounded">ES</span>
+<span class="font-body-md text-body-md font-medium">Español</span>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">radio_button_checked</span>
+</button>
+<button type="button" onclick="setLanguage('en')" class="flex items-center justify-between w-full p-5 rounded-lg border border-surface-card hover:border-outline-variant transition-colors group focus:outline-none focus:ring-2 focus:ring-primary">
+<div class="flex items-center gap-4">
+<span class="font-black text-xs px-2 py-1 bg-surface-card text-text-secondary group-hover:bg-outline-variant rounded">EN</span>
+<span class="font-body-md text-body-md text-text-secondary group-hover:text-text-primary">English</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary">radio_button_unchecked</span>
+</button>
+</div>
+<div class="mt-8 pt-8 border-t border-surface-card">
+<p class="text-xs text-text-secondary leading-relaxed italic">
+                    "El diseño es un lenguaje universal, pero las palabras deben ser accesibles para todos."
+                </p>
+</div>
+</section>
+<section class="lg:col-span-12 order-2 lg:order-3 bg-surface-container-lowest border border-surface-card rounded-xl p-card-padding shadow-sm">
+<div class="flex flex-col gap-8">
+<div class="max-w-md">
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined">format_size</span>
+<h2 class="font-h2 text-h2">Escala tipográfica</h2>
+</div>
+<p class="font-body-md text-text-secondary">Ajusta el tamaño base de la fuente para mejorar la legibilidad. Esto escalará los encabezados y el texto del cuerpo proporcionalmente en todo el sitio.</p>
+</div>
+<div class="w-full max-w-2xl">
+<div class="relative h-2 rounded-full bg-surface-container-high mb-6 cursor-pointer" id="sliderTrack" onclick="handleTrackClick(event)">
+<div class="absolute top-0 left-0 h-full rounded-full bg-primary transition-all duration-150" id="sliderFill" style="width: 0%"></div>
+<input aria-label="Ajustar tamaño del texto" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" aria-valuetext="Estándar" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" id="fontSlider" max="3" min="1" oninput="applyFont(this.value); updatePreview(this.value); updateSliderFill(this.value)" step="1" type="range"/>
+<div class="absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-primary shadow-md pointer-events-none transition-all duration-150" id="sliderThumb" style="left: 0%; transform: translate(-50%, -50%); border: 3px solid #fff;"></div>
+</div>
+<div class="sr-only" aria-live="polite" id="sliderAnnounce">Tamaño de texto: Estándar</div>
+<div class="flex flex-wrap justify-center sm:justify-between gap-x-4 gap-y-2 text-[11px] md:text-xs font-label-md uppercase tracking-widest text-text-secondary mt-3">
+<span class="text-center text-primary font-bold">Estándar</span>
+<span class="text-center">Grande</span>
+<span class="text-center">Extra grande</span>
+</div>
+</div>
+</div>
+<div class="mt-12 w-full flex justify-center">
+<div class="w-full max-w-3xl p-8 bg-bg-base border border-surface-card rounded-lg border-dashed" id="preview">
+<p class="font-label-md text-label-md text-primary mb-4">Vista previa</p>
+<div class="space-y-4">
+<h3 class="font-h3 text-h3 text-text-primary">Una galería para experiencias digitales</h3>
+<p class="font-body-md text-body-md text-text-secondary">
+                        Esta es una vista previa de cómo se verá el texto. Paco-C utiliza una combinación sofisticada de Atkinson Hyperlegible e Inter para asegurar que cada palabra sea hermosa y legible.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<div id="scaleSpacer"></div>
+<div class="flex flex-col md:flex-row items-center justify-between py-12 border-t border-surface-card gap-8 w-full max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
+<div class="flex items-center gap-6">
+<button class="bg-primary hover:bg-cta-hover text-on-primary px-8 py-3 rounded font-body-md font-medium transition-all duration-200 active:scale-95 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary" onclick="applySettings()">
+                    Aplicar ajustes
+                </button>
+<button class="text-text-primary bg-surface-container-low border border-outline hover:bg-surface-container-high px-8 py-3 rounded font-body-md font-medium transition-all duration-200 active:scale-95 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary" onclick="resetSettings()">
+                    Restablecer valores
+                </button>
+</div>
+<div class="flex items-center gap-2 text-text-secondary italic">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+<p class="text-sm">Los cambios se aplicarán en toda la página web.</p>
+</div>
+</div>
+<footer class="bg-stone-50 dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800">
+<div class="max-w-[1440px] mx-auto py-16 px-8 md:px-12 text-center">
+<div class="flex flex-wrap justify-center items-center gap-4 text-xs font-['Public_Sans'] uppercase tracking-widest text-stone-600 dark:text-stone-400 mb-8">
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="home.html">Inicio</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="proyectos ux.html">Proyectos UX</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="sobre mi.html">Sobre mí</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="proyectos artisticos.html">Obras</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="contacto.html">Contacto</a><span>|</span><a class="text-fuchsia-600 dark:text-fuchsia-400 font-medium hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="accesibilidad.html">Accesibilidad</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="politica de privacidad.html">Política de privacidad</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="aviso legal.html">Aviso legal</a>
+</div>
+<div class="text-[10px] font-['Public_Sans'] uppercase tracking-[0.3em] text-stone-400 dark:text-stone-600">
+        PACO-C © 2018. Todos los derechos reservados.
+    </div>
+</div>
+</footer>
+<script>
+        function updateSliderFill(val) {
+            const pct = ((val - 1) / 2) * 100;
+            document.getElementById('sliderFill').style.width = pct + '%';
+            document.getElementById('sliderThumb').style.left = pct + '%';
+            const labels = { '1': 'Estándar', '2': 'Grande', '3': 'Extra grande' };
+            document.getElementById('sliderAnnounce').textContent = 'Tamaño de texto: ' + (labels[val] || '');
+            document.getElementById('fontSlider').setAttribute('aria-valuenow', val);
+            document.getElementById('fontSlider').setAttribute('aria-valuetext', labels[val] || '');
+        }
+        function handleTrackClick(e) {
+            const track = document.getElementById('sliderTrack');
+            const rect = track.getBoundingClientRect();
+            const pct = (e.clientX - rect.left) / rect.width;
+            const val = Math.round(1 + pct * 2);
+            const clamped = Math.max(1, Math.min(3, val));
+            document.getElementById('fontSlider').value = clamped;
+            applyFont(clamped);
+            updatePreview(clamped);
+            updateSliderFill(clamped);
+        }
+        function applySettings() {
+            const contrast = document.getElementById('checkboxContrast').checked;
+            localStorage.setItem('accesibilidad-contrast', contrast);
+            if (contrast) {
+                document.body.classList.add('high-contrast');
+            } else {
+                document.body.classList.remove('high-contrast');
+            }
+            const motion = document.getElementById('checkboxMotion').checked;
+            localStorage.setItem('accesibilidad-motion', motion);
+            if (motion) {
+                document.body.classList.add('reduce-motion');
+            } else {
+                document.body.classList.remove('reduce-motion');
+            }
+            const fontVal = document.getElementById('fontSlider').value;
+            localStorage.setItem('accesibilidad-font', fontVal);
+            applyFont(fontVal);
+            updatePreview(fontVal);
+            updateSliderFill(fontVal);
+        }
+        function resetSettings() {
+            document.getElementById('checkboxContrast').checked = false;
+            document.getElementById('checkboxMotion').checked = false;
+            document.getElementById('fontSlider').value = '1';
+            document.body.classList.remove('high-contrast', 'reduce-motion');
+            localStorage.setItem('accesibilidad-contrast', 'false');
+            localStorage.setItem('accesibilidad-motion', 'false');
+            localStorage.setItem('accesibilidad-font', '1');
+            applyFont('1');
+            updatePreview('1');
+            updateSliderFill('1');
+        }
+        function applyFont(val) {
+            const multipliers = { '1': 1, '2': 1.12, '3': 1.22 };
+            const scale = multipliers[val] || 1;
+            const mainEl = document.getElementById('mainContent');
+            mainEl.style.transform = 'scale(' + scale + ')';
+            mainEl.style.transformOrigin = 'top left';
+            mainEl.style.width = (100 / scale) + '%';
+            const spacer = document.getElementById('scaleSpacer');
+            requestAnimationFrame(function() {
+                const baseH = mainEl.offsetHeight;
+                const overflow = baseH * (scale - 1);
+                spacer.style.height = Math.max(0, overflow) + 'px';
+            });
+        }
+        function updatePreview(val) {
+            const preview = document.getElementById('preview');
+            const sizes = { '1': '', '2': '20px', '3': '24px' };
+            preview.style.fontSize = sizes[val] || '';
+        }
+        function setLanguage(lang) {
+            localStorage.setItem('accesibilidad-language', lang);
+            const es = document.querySelector('[onclick="setLanguage(\'es\')"]');
+            const en = document.querySelector('[onclick="setLanguage(\'en\')"]');
+            if (lang === 'es') {
+                es.className = 'flex items-center justify-between w-full p-5 rounded-lg bg-surface-container-high border border-primary text-text-primary';
+                es.innerHTML = '<div class="flex items-center gap-4"><span class="font-black text-xs px-2 py-1 bg-primary text-on-primary rounded">ES</span><span class="font-body-md text-body-md font-medium">Español</span></div><span class="material-symbols-outlined text-primary" style="font-variation-settings: \'FILL\' 1;">radio_button_checked</span>';
+                en.className = 'flex items-center justify-between w-full p-5 rounded-lg border border-surface-card hover:border-outline-variant transition-colors group';
+                en.innerHTML = '<div class="flex items-center gap-4"><span class="font-black text-xs px-2 py-1 bg-surface-card text-text-secondary group-hover:bg-outline-variant rounded">EN</span><span class="font-body-md text-body-md text-text-secondary group-hover:text-text-primary">English</span></div><span class="material-symbols-outlined text-text-secondary">radio_button_unchecked</span>';
+            } else {
+                en.className = 'flex items-center justify-between w-full p-5 rounded-lg bg-surface-container-high border border-primary text-text-primary';
+                en.innerHTML = '<div class="flex items-center gap-4"><span class="font-black text-xs px-2 py-1 bg-primary text-on-primary rounded">EN</span><span class="font-body-md text-body-md font-medium">English</span></div><span class="material-symbols-outlined text-primary" style="font-variation-settings: \'FILL\' 1;">radio_button_checked</span>';
+                es.className = 'flex items-center justify-between w-full p-5 rounded-lg border border-surface-card hover:border-outline-variant transition-colors group';
+                es.innerHTML = '<div class="flex items-center gap-4"><span class="font-black text-xs px-2 py-1 bg-surface-card text-text-secondary group-hover:bg-outline-variant rounded">ES</span><span class="font-body-md text-body-md text-text-secondary group-hover:text-text-primary">Español</span></div><span class="material-symbols-outlined text-text-secondary">radio_button_unchecked</span>';
+            }
+        }
+        (function loadSettings() {
+            const contrast = localStorage.getItem('accesibilidad-contrast') === 'true';
+            document.getElementById('checkboxContrast').checked = contrast;
+            if (contrast) document.body.classList.add('high-contrast');
+            const motion = localStorage.getItem('accesibilidad-motion') === 'true';
+            document.getElementById('checkboxMotion').checked = motion;
+            if (motion) document.body.classList.add('reduce-motion');
+            const fontVal = localStorage.getItem('accesibilidad-font') || '1';
+            document.getElementById('fontSlider').value = fontVal;
+            applyFont(fontVal);
+            updatePreview(fontVal);
+            updateSliderFill(fontVal);
+        })();
+    </script>
+</body></html>

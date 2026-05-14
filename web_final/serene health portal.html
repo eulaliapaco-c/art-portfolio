@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Serene Health Portal — Paco-C</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@400;500;600&amp;family=Public+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="shortcut icon" href="favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="paco-c.com" />
+<link rel="manifest" href="favicon/site.webmanifest" />
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              surface: "#fff7f9", "secondary-fixed": "#d8e7d1", "surface-container-high": "#f0e6e9",
+              "on-primary": "#ffffff", background: "#fff7f9", "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#b4d08d", "text-secondary": "#5A5450",
+              "on-secondary-container": "#586655", "surface-dim": "#e1d7db",
+              "surface-bright": "#fff7f9", "surface-container-low": "#fbf1f5",
+              error: "#ba1a1a", "surface-card": "#E7E3E0", "primary-fixed": "#ffd7f0",
+              "inverse-primary": "#f2b4df", "primary-container": "#c78db6",
+              "inverse-surface": "#342f32", "secondary-container": "#d5e4ce",
+              "outline-variant": "#d2c2ca", secondary: "#546250",
+              "dark-text-secondary": "#BDBDBD", primary: "#804e73",
+              "on-tertiary-container": "#273c09", "on-tertiary-fixed-variant": "#374d19",
+              "inverse-on-surface": "#f9eef2", outline: "#81737b",
+              "on-primary-fixed": "#330a2d", "on-primary-container": "#532649",
+              "dark-text-primary": "#E0E0E0", "tertiary-fixed": "#cfeca7",
+              "surface-tint": "#804e73", "on-error-container": "#93000a",
+              "on-tertiary": "#ffffff", "on-background": "#1f1a1d",
+              "error-container": "#ffdad6", "on-secondary-fixed": "#121f11",
+              "secondary-fixed-dim": "#bccbb5", "on-secondary-fixed-variant": "#3d4a3a",
+              "dark-surface-card": "#1E1E1E", "on-secondary": "#ffffff",
+              "surface-variant": "#eae0e3", "dark-bg-base": "#121212",
+              "cta-hover": "#A86E97", "surface-container-highest": "#eae0e3",
+              "on-tertiary-fixed": "#102000", "on-surface": "#1f1a1d",
+              "on-primary-fixed-variant": "#66375a", "bg-base": "#F4F1EE",
+              "text-primary": "#2D2926", "primary-fixed-dim": "#f2b4df",
+              "on-error": "#ffffff", tertiary: "#4e662e", "tertiary-container": "#8da869",
+              "on-surface-variant": "#4f444a", "surface-container": "#f6ebef"
+            },
+            borderRadius: { DEFAULT: "8px", lg: "8px", xl: "12px", card: "8px", full: "9999px" },
+            spacing: { "stack-md": "1.5rem", "section-gap": "8rem", "stack-lg": "3rem", "container-padding": "2rem", "stack-sm": "0.5rem", "card-padding": "2.5rem" },
+            fontFamily: { h2: ["Atkinson Hyperlegible"], h1: ["Atkinson Hyperlegible"], "label-md": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], h3: ["Atkinson Hyperlegible"], sans: ["Public Sans", "sans-serif"] },
+            fontSize: { h2: ["40px", { lineHeight: "1.2", fontWeight: "600" }], h1: ["64px", { lineHeight: "1.1", fontWeight: "700" }], "label-md": ["14px", { lineHeight: "1.2", fontWeight: "500" }], "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }], "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }], h3: ["28px", { lineHeight: "1.3", fontWeight: "600" }] }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #F4F1EE; color: #2D2926; margin: 0; }
+        .material-symbols-outlined { font-family: 'Material Symbols Outlined', sans-serif; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .canvas-texture { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); opacity: 0.03; pointer-events: none; }
+        body { min-height: max(884px, 100dvh); }
+        .museum-shadow { box-shadow: 0 4px 24px -4px rgba(45, 41, 38, 0.08); }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary-container selection:text-white">
+<header class="bg-stone-50/90 backdrop-blur-md dark:bg-stone-950/90 fixed top-0 w-full z-50 border-b border-stone-200 dark:border-stone-800">
+<nav class="flex justify-between items-center px-8 md:px-12 py-6 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-4">
+<a href="home.html" class="text-lg font-bold tracking-[0.2em] text-stone-900 dark:text-stone-50 hover:text-primary focus:text-primary focus:outline-none transition-colors">PACO-C</a>
+<button class="lg:hidden p-2 text-stone-900 dark:text-stone-50 focus:outline-none focus:ring-2 focus:ring-primary" id="menu_btn" onclick="document.getElementById('mobile_menu').classList.remove('hidden')" aria-label="Abrir menú">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-10 font-['Public_Sans'] font-light tracking-wide">
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="home.html">Inicio</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="proyectos ux.html">Proyectos UX</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="sobre mi.html">Sobre mí</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="proyectos artisticos.html">Obras</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="contacto.html">Contacto</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="accesibilidad.html">Accesibilidad</a>
+</div>
+</nav>
+</header>
+<div class="hidden fixed inset-0 z-[60]" id="mobile_menu">
+<div class="absolute inset-0 bg-black/50" onclick="this.parentElement.classList.add('hidden')"></div>
+<div class="relative ml-auto w-72 h-full bg-stone-50 shadow-2xl flex flex-col">
+<div class="flex items-center justify-between px-6 py-5 border-b border-stone-200">
+<span class="text-lg font-bold tracking-[0.2em] text-stone-900">PACO-C</span>
+<button class="p-2 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary" onclick="this.closest('#mobile_menu').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col px-6 pt-6 gap-6 font-['Public_Sans'] font-light tracking-wide text-lg">
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="home.html">Inicio</a>
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="proyectos ux.html">Proyectos UX</a>
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="sobre mi.html">Sobre mí</a>
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="proyectos artisticos.html">Obras</a>
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="contacto.html">Contacto</a>
+<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="accesibilidad.html">Accesibilidad</a>
+<div class="border-t border-stone-200 my-4"></div>
+<a class="text-stone-500 hover:text-fuchsia-600 transition-colors text-sm" href="politica de privacidad.html">Política de privacidad</a>
+<a class="text-stone-500 hover:text-fuchsia-600 transition-colors text-sm" href="aviso legal.html">Aviso legal</a>
+</nav>
+</div>
+</div>
+<main>
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 pb-8">
+<span class="font-label-md text-primary uppercase tracking-[0.2em] mb-4 block">Caso de Estudio</span>
+<h1 class="font-h1 text-h1 mb-6 text-text-primary">Serene Health <span class="text-[#C78DB6] italic font-light">Portal</span></h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl leading-relaxed">Diseño de un portal de salud mental que conecta pacientes con terapeutas de manera accesible, privada y segura. El proyecto priorizó la experiencia emocional del usuario, creando un espacio digital que transmite calma y confianza desde el primer clic.</p>
+<div class="mt-16 w-full max-w-5xl aspect-video rounded-xl overflow-hidden museum-shadow">
+<img alt="Serene Health portal dashboard" class="w-full h-full object-cover" src="https://placehold.co/1200x675/c78db6/ffffff?text=Serene+Health+Portal"/>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-32">
+<div class="grid md:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-h2 text-h2 mb-6">Contexto</h2>
+<p class="font-body-lg text-body-lg text-text-secondary leading-relaxed mb-6">La salud mental es un tema sensible que requiere un enfoque de diseño cuidadoso. Serene Health buscaba eliminar las barreras de acceso a la terapia online, ofreciendo una plataforma que priorizara la privacidad, la facilidad de uso y la conexión humana.</p>
+<p class="font-body-lg text-body-lg text-text-secondary leading-relaxed">Se realizaron entrevistas con pacientes, terapeutas y psicólogos clínicos para comprender las necesidades emocionales y funcionales de cada perfil de usuario.</p>
+</div>
+<div>
+<h2 class="font-h2 text-h2 mb-6">Rol</h2>
+<div class="space-y-4">
+<div class="border-b border-surface-card pb-4">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest block mb-1">Duración</span>
+<p class="font-body-md text-text-primary">5 meses (mar 2024 — jul 2024)</p>
+</div>
+<div class="border-b border-surface-card pb-4">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest block mb-1">Equipo</span>
+<p class="font-body-md text-text-primary">1 lead UX, 1 diseñador UI, 1 content designer, 3 desarrolladores</p>
+</div>
+<div class="border-b border-surface-card pb-4">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest block mb-1">Herramientas</span>
+<p class="font-body-md text-text-primary">Figma, Miro, Dovetail, Usertesting.com, Storybook</p>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest block mb-1">Métodos</span>
+<p class="font-body-md text-text-primary">Design thinking, diary studies, test de usabilidad remotos, análisis de accesibilidad WCAG</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-24 bg-white">
+<div class="max-w-3xl">
+<h2 class="font-h2 text-h2 mb-8">La Premisa</h2>
+<p class="font-body-lg text-body-lg text-text-secondary italic leading-relaxed">"La salud mental merece un espacio digital tan cuidadoso como la propia terapia. Serene Health nace para eliminar las barreras de acceso a la terapia online, demostrando que la tecnología puede ser un puente hacia el bienestar emocional, no un obstáculo."</p>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-32">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-h2 text-h2 mb-6">El Desafío</h2>
+<p class="font-body-lg text-body-lg text-text-secondary mb-8 leading-relaxed">Diseñar una experiencia digital para un ámbito tan sensible como la salud mental exigía un equilibrio delicado: crear un espacio que inspirara confianza y calma, pero que a la vez fuera funcional, accesible y respetuoso con la privacidad del usuario.</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">lock</span>
+<span class="font-body-md text-text-primary">Garantizar la privacidad y confidencialidad de los datos de salud mental.</span>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">spa</span>
+<span class="font-body-md text-text-primary">Transmitir calma y serenidad en cada interacción sin sacrificar usabilidad.</span>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">accessible</span>
+<span class="font-body-md text-text-primary">Cumplir con WCAG 2.1 AA en un contexto emocionalmente sensible.</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden museum-shadow">
+<img alt="Mental health design challenges" class="w-full h-64 md:h-96 object-cover" src="https://placehold.co/800x500/555555/ffffff?text=Serene+Health+Challenges"/>
+</div>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-32 bg-[#F4F1EE]">
+<div class="text-center mb-20">
+<h2 class="font-h2 text-h2 mb-4">El Proceso</h2>
+<p class="font-body-md text-body-md text-text-secondary uppercase tracking-widest">Diseño Centrado en el Usuario con Enfoque Emocional</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white p-10 rounded-lg museum-shadow hover:shadow-sm transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">psychology</span>
+<h3 class="font-h3 text-h3 mb-4">Empathize</h3>
+<p class="font-body-md text-text-secondary mb-4">Investigación empática con pacientes y terapeutas para comprender necesidades emocionales.</p>
+<ul class="text-sm space-y-2 text-text-primary">
+<li>• Diary Studies</li>
+<li>• Entrevistas en profundidad</li>
+<li>• Mapa de empatía</li>
+</ul>
+</div>
+<div class="bg-white p-10 rounded-lg museum-shadow hover:shadow-sm transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">route</span>
+<h3 class="font-h3 text-h3 mb-4">Define</h3>
+<p class="font-body-md text-text-secondary mb-4">Síntesis de hallazgos para definir el problema de diseño y los objetivos.</p>
+<ul class="text-sm space-y-2 text-text-primary">
+<li>• User Personas</li>
+<li>• Journey Mapping</li>
+<li>• How Might We</li>
+</ul>
+</div>
+<div class="bg-white p-10 rounded-lg museum-shadow hover:shadow-sm transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">emoji_objects</span>
+<h3 class="font-h3 text-h3 mb-4">Ideate</h3>
+<p class="font-body-md text-text-secondary mb-4">Exploración de soluciones que equilibran emoción y funcionalidad.</p>
+<ul class="text-sm space-y-2 text-text-primary">
+<li>• Co-creation Sessions</li>
+<li>• Wireflows</li>
+<li>• Moodboards</li>
+</ul>
+</div>
+<div class="bg-white p-10 rounded-lg museum-shadow hover:shadow-sm transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">checklist</span>
+<h3 class="font-h3 text-h3 mb-4">Test</h3>
+<p class="font-body-md text-text-secondary mb-4">Validación iterativa con usuarios reales y auditoría de accesibilidad.</p>
+<ul class="text-sm space-y-2 text-text-primary">
+<li>• Test de usabilidad</li>
+<li>• Auditoría WCAG 2.1</li>
+<li>• Iteraciones de diseño</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-32">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="rounded-xl overflow-hidden museum-shadow">
+<img alt="Serene Health emotional design" class="w-full h-full object-cover" src="https://placehold.co/800x600/c78db6/ffffff?text=Emotional+Design"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-h3 text-h3 mb-4">Diseño Emocional como Prioridad</h3>
+<p class="font-body-lg text-text-secondary leading-relaxed">Cada elemento visual fue elegido para transmitir calma y seguridad: una paleta cromática suave, tipografía amable, micro-interacciones cuidadosas y un flujo de navegación que reduce la ansiedad. La privacidad no es solo una capa técnica, sino una experiencia de diseño visible en cada pantalla.</p>
+</div>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-32 bg-primary-container text-white rounded-t-[4rem]">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-h2 text-h2 mb-12">El Triunfo</h2>
+<div class="grid md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center">
+<span class="text-5xl font-bold mb-2">8.7/10</span>
+<span class="font-label-md uppercase tracking-widest opacity-80 text-sm">Puntuación Media UEQ</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-5xl font-bold mb-2">94%</span>
+<span class="font-label-md uppercase tracking-widest opacity-80 text-sm">Registro sin Asistencia</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-5xl font-bold mb-2">−42%</span>
+<span class="font-label-md uppercase tracking-widest opacity-80 text-sm">Abandono en Onboarding</span>
+</div>
+</div>
+<p class="mt-16 font-body-lg text-body-lg max-w-2xl mx-auto">Los resultados de Serene Health demuestran que cuando el diseño antepone las necesidades emocionales del usuario, la accesibilidad y la confianza se convierten en el motor del crecimiento.</p>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-32">
+<div class="max-w-2xl">
+<h2 class="font-h2 text-h2 mb-6">Reflexión</h2>
+<p class="font-body-lg text-text-secondary leading-relaxed mb-12">Este proyecto me recordó que el diseño de productos digitales para la salud mental lleva una responsabilidad inmensa. Cada decisión —desde la tipografía hasta la disposición de los elementos— puede influir en el estado emocional del usuario. Diseñar con empatía no es una opción, es una obligación.</p>
+<a class="inline-block bg-primary text-white px-10 py-4 rounded-lg font-sans font-bold hover:bg-cta-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200" href="https://www.figma.com/proto/serene-health" aria-label="Ver prototipo interactivo de Serene Health">Ver Prototipo Interactivo</a>
+</div>
+</section>
+<nav class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center py-16 border-t border-outline-variant">
+<a class="group flex items-center gap-4" href="ethical wealth interface.html">
+<div class="p-4 border border-outline-variant group-hover:border-primary transition-colors rounded-lg">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary">chevron_left</span>
+</div>
+<div class="hidden sm:block">
+<span class="font-label-md text-[10px] text-text-secondary uppercase tracking-widest block">Anterior</span>
+<span class="font-h3 text-body-lg font-bold text-text-primary">Ethical Wealth</span>
+</div>
+</a>
+<a class="group flex items-center gap-4 text-right" href="proyectos ux.html">
+<div class="hidden sm:block">
+<span class="font-label-md text-[10px] text-text-secondary uppercase tracking-widest block">Siguiente</span>
+<span class="font-h3 text-body-lg font-bold text-text-primary">Volver al índice</span>
+</div>
+<div class="p-4 border border-outline-variant group-hover:border-primary transition-colors rounded-lg">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary">chevron_right</span>
+</div>
+</a>
+</nav>
+</main>
+<footer class="bg-stone-50 dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800">
+<div class="max-w-[1440px] mx-auto py-16 px-8 md:px-12 text-center">
+<div class="flex flex-wrap justify-center items-center gap-4 text-xs font-['Public_Sans'] uppercase tracking-widest text-stone-600 dark:text-stone-400 mb-8">
+<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="home.html">Inicio</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="proyectos ux.html">Proyectos UX</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="sobre mi.html">Sobre mí</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="proyectos artisticos.html">Obras</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="contacto.html">Contacto</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="accesibilidad.html">Accesibilidad</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="politica de privacidad.html">Política de privacidad</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="aviso legal.html">Aviso legal</a>
+</div>
+<div class="text-[10px] font-['Public_Sans'] uppercase tracking-[0.3em] text-stone-400 dark:text-stone-600">PACO-C © 2018. Todos los derechos reservados.</div>
+</div>
+</footer>
+<script>(function(){var v=localStorage.getItem("accesibilidad-font");var m={"1":1,"2":1.12,"3":1.22};var s=m[v]||1;if(s>1){document.body.style.transform="scale("+s+")";document.body.style.transformOrigin="top center";document.body.style.width=(100/s)+"%";document.body.style.margin="0 auto";document.body.style.overflowX="hidden";document.body.style.minHeight=(100/s)+"vh"}})();</script>
+</body></html>
