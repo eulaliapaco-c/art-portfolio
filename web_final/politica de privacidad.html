@@ -160,24 +160,26 @@
         .legal-content strong {
           color: #2D2926;
         }
+        img { -webkit-user-drag: none; user-select: none; -moz-user-select: none; }
+        a:focus-visible, button:focus-visible { outline: 2px solid #804e73; outline-offset: 2px; border-radius: 4px; }
     </style>
 </head>
 <body class="font-body-md selection:bg-primary-container selection:text-white">
 <header class="bg-stone-50/90 backdrop-blur-md dark:bg-stone-950/90 fixed top-0 w-full z-50 border-b border-stone-200 dark:border-stone-800">
 <nav class="flex justify-between items-center px-8 md:px-12 py-6 max-w-[1440px] mx-auto">
 <div class="flex items-center gap-4">
-<a href="home.html" class="text-lg font-bold tracking-[0.2em] text-stone-900 dark:text-stone-50 hover:text-primary focus:text-primary focus:outline-none transition-colors">PACO-C</a>
+<a href="home.html" class="flex items-center gap-2 text-lg font-bold tracking-[0.2em] text-stone-900 dark:text-stone-50 hover:text-primary focus:text-primary focus:outline-none transition-colors"><img alt="PACO-C" class="h-12 w-auto" src="img/assets/logo.svg"/>PACO-C</a>
 <button class="lg:hidden p-2 text-stone-900 dark:text-stone-50 focus:outline-none focus:ring-2 focus:ring-primary" id="menu_btn" onclick="document.getElementById('mobile_menu').classList.remove('hidden')" aria-label="Abrir menú">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 <div class="hidden lg:flex items-center gap-10 font-['Public_Sans'] font-light tracking-wide">
-<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="home.html">Inicio</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="proyectos ux.html">Proyectos UX</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="sobre mi.html">Sobre mí</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="proyectos artisticos.html">Obras</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="contacto.html">Contacto</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-500 dark:hover:text-fuchsia-300 transition-all duration-300" href="accesibilidad.html">Accesibilidad</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-primary dark:hover:text-primary hover:font-semibold transition-all duration-300" href="home.html">Inicio</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-primary dark:hover:text-primary hover:font-semibold transition-all duration-300" href="proyectos ux.html">Proyectos UX</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-primary dark:hover:text-primary hover:font-semibold transition-all duration-300" href="sobre mi.html">Sobre mí</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-primary dark:hover:text-primary hover:font-semibold transition-all duration-300" href="proyectos artisticos.html">Obras</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-primary dark:hover:text-primary hover:font-semibold transition-all duration-300" href="contacto.html">Contacto</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-primary dark:hover:text-primary hover:font-semibold transition-all duration-300" href="accesibilidad.html">Accesibilidad</a>
 </div>
 </nav>
 </header>
@@ -185,26 +187,26 @@
 <div class="absolute inset-0 bg-black/50" onclick="this.parentElement.classList.add('hidden')"></div>
 <div class="relative ml-auto w-72 h-full bg-stone-50 shadow-2xl flex flex-col">
 <div class="flex items-center justify-between px-6 py-5 border-b border-stone-200">
-<span class="text-lg font-bold tracking-[0.2em] text-stone-900">PACO-C</span>
+<span class="flex items-center gap-2 text-lg font-bold tracking-[0.2em] text-stone-900"><img alt="PACO-C" class="h-11 w-auto" src="img/assets/logo.svg"/>PACO-C</span>
 <button class="p-2 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary" onclick="this.closest('#mobile_menu').classList.add('hidden')">
 <span class="material-symbols-outlined">close</span>
 </button>
 </div>
 <nav class="flex flex-col px-6 pt-6 gap-6 font-['Public_Sans'] font-light tracking-wide text-lg">
-<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="home.html">Inicio</a>
-<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="proyectos ux.html">Proyectos UX</a>
-<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="sobre mi.html">Sobre mí</a>
-<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="proyectos artisticos.html">Obras</a>
-<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="contacto.html">Contacto</a>
-<a class="text-stone-600 hover:text-fuchsia-600 transition-colors" href="accesibilidad.html">Accesibilidad</a>
+<a class="text-stone-600 hover:text-primary hover:font-semibold transition-colors" href="home.html">Inicio</a>
+<a class="text-stone-600 hover:text-primary hover:font-semibold transition-colors" href="proyectos ux.html">Proyectos UX</a>
+<a class="text-stone-600 hover:text-primary hover:font-semibold transition-colors" href="sobre mi.html">Sobre mí</a>
+<a class="text-stone-600 hover:text-primary hover:font-semibold transition-colors" href="proyectos artisticos.html">Obras</a>
+<a class="text-stone-600 hover:text-primary hover:font-semibold transition-colors" href="contacto.html">Contacto</a>
+<a class="text-stone-600 hover:text-primary hover:font-semibold transition-colors" href="accesibilidad.html">Accesibilidad</a>
 <div class="border-t border-stone-200 my-4"></div>
-<a class="text-stone-500 hover:text-fuchsia-600 transition-colors text-sm" href="politica de privacidad.html">Política de privacidad</a>
-<a class="text-stone-500 hover:text-fuchsia-600 transition-colors text-sm" href="aviso legal.html">Aviso legal</a>
+<a class="text-stone-500 hover:text-primary hover:font-semibold transition-colors text-sm" href="politica de privacidad.html">Política de privacidad</a>
+<a class="text-stone-500 hover:text-primary hover:font-semibold transition-colors text-sm" href="aviso legal.html">Aviso legal</a>
 </nav>
 </div>
 </div>
-<main>
-<section class="relative px-8 md:px-12 lg:px-20 max-w-[1440px] mx-auto py-24 overflow-hidden">
+<main class="pt-24 md:pt-32">
+<section class="relative px-8 md:px-12 lg:px-20 max-w-[1440px] mx-auto pb-8 md:pb-24 overflow-hidden">
 <div class="absolute inset-0 canvas-texture z-20"></div>
 <div class="relative z-10 max-w-4xl mx-auto">
 <h1 class="font-h1 text-h1 text-text-primary mb-8 tracking-tight leading-[1.05]">
@@ -262,11 +264,12 @@
 <footer class="bg-stone-50 dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800">
 <div class="max-w-[1440px] mx-auto py-16 px-8 md:px-12 text-center">
 <div class="flex flex-wrap justify-center items-center gap-4 text-xs font-['Public_Sans'] uppercase tracking-widest text-stone-600 dark:text-stone-400 mb-8">
-<a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="home.html">Inicio</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="proyectos ux.html">Proyectos UX</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="sobre mi.html">Sobre mí</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="proyectos artisticos.html">Obras</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="contacto.html">Contacto</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="accesibilidad.html">Accesibilidad</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="politica de privacidad.html">Política de privacidad</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-300 transition-colors" href="aviso legal.html">Aviso legal</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-primary hover:font-semibold transition-colors" href="home.html">Inicio</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-primary hover:font-semibold transition-colors" href="proyectos ux.html">Proyectos UX</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-primary hover:font-semibold transition-colors" href="sobre mi.html">Sobre mí</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-primary hover:font-semibold transition-colors" href="proyectos artisticos.html">Obras</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-primary hover:font-semibold transition-colors" href="contacto.html">Contacto</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-primary hover:font-semibold transition-colors" href="accesibilidad.html">Accesibilidad</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-primary hover:font-semibold transition-colors" href="politica de privacidad.html">Política de privacidad</a><span>|</span><a class="text-stone-600 dark:text-stone-400 hover:text-primary hover:font-semibold transition-colors" href="aviso legal.html">Aviso legal</a>
 </div>
 <div class="text-[10px] font-['Public_Sans'] uppercase tracking-[0.3em] text-stone-400 dark:text-stone-600">PACO-C © 2018. Todos los derechos reservados.</div>
 </div>
 </footer>
 
 <script>(function(){var v=localStorage.getItem("accesibilidad-font");var m={"1":1,"2":1.12,"3":1.22};var s=m[v]||1;if(s>1){document.body.style.transform="scale("+s+")";document.body.style.transformOrigin="top center";document.body.style.width=(100/s)+"%";document.body.style.margin="0 auto";document.body.style.overflowX="hidden";document.body.style.minHeight=(100/s)+"vh"}})();</script>
+<script>document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG')e.preventDefault()})</script>
 </body></html>
